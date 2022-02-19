@@ -1,7 +1,4 @@
-#nav__container {
-  background-color: var(--blue-0);
-}
+$customPadding: 1000px;
 
-#nav__link {
-  color: black;
-}
+@import "font";
+@import "navbar";
