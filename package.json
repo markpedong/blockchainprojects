@@ -1,0 +1,26 @@
+{
+  "name": "crypto-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markpedong/blockchainprojects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markpedong/blockchainprojects/issues"
+  },
+  "homepage": "https://github.com/markpedong/blockchainprojects#readme",
+  "dependencies": {
+    "parcel": "^2.3.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2"
+  }
+}
