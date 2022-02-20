@@ -1,3 +1,5 @@
+@import "variables";
+
 .navbar-toggler {
   border: 0;
   color: white;
@@ -51,7 +53,7 @@
 }
 
 #nav__container {
-  background: rgb(13, 13, 71);
+  background: $backgroundcolor;
 }
 
 #nav_brand {
@@ -59,7 +61,7 @@
 }
 
 #nav__brand {
-  font-family: "Inter", sans-serif;
+  font-family: $interFont, sans-serif;
   font-size: var(--font-size-2);
   border-left: 2px solid var(--gray-0);
   padding-left: var(--size-3);
@@ -68,7 +70,7 @@
 #nav__link {
   color: var(--gray-0);
   margin: 0 var(--size-3);
-  font-family: "Rubik", sans-serif;
+  font-family: $rubikFont, sans-serif;
   border-radius: var(--radius-2);
 }
 
@@ -78,10 +80,10 @@
   color: var(--gray-9);
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
   #nav__outer__container {
     padding: 0;
-    padding-left: var(--size-5);
+    // padding-left: var(--size-5);
   }
 
   #navbar_toggler {
@@ -107,10 +109,6 @@
 @media only screen and (max-width: 576px) {
   #nav__brand {
     display: none;
-  }
-
-  #nav__outer__container {
-    padding-left: var(--size-3);
   }
 
   #navbar_toggler {

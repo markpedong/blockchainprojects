@@ -33,6 +33,18 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+    ></script>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/src/css/main.min.css" />
   </head>
@@ -40,13 +52,13 @@
     <!-- navbar container -->
     <section id="nav__container">
       <nav
-        class="navbar navbar-expand-lg navbar-dark container-lg pt-4 pt-sm-5"
+        class="navbar navbar-expand-lg navbar-dark container-lg py-5 pt-sm-5"
         id="nav__outer__container"
       >
         <!-- Navigation Brands and Button -->
         <div class="container-fluid" id="nav__inner__container">
           <img
-            class="pe-3 ps-lg-5"
+            class="px-2 px-sm-4 ps-lg-5"
             src="/src/img/blockchainprojectslogo-white.svg"
             alt="navbrand"
             id="nav_brand"
@@ -82,6 +94,34 @@
           </div>
         </div>
       </nav>
+    </section>
+    <!-- Landing Page -->
+    <section id="landingpage__container">
+      <div class="container-lg pt-lg-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div
+            class="col d-grid justify-content-center align-items-end"
+            id="landingtext__container"
+          >
+            <p class="text-center text-lg-start" id="landing__title">
+              Check out which projects are listed on a certain network.
+            </p>
+            <p
+              class="text-center text-lg-start align-self-start"
+              id="landing__content"
+            >
+              And checkout where are they listed on major exchanges!
+            </p>
+          </div>
+          <div class="col d-none d-lg-block">
+            <img
+              class="img-fluid"
+              src="/src/img/blockchainillustration.svg"
+              alt="illustration"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
