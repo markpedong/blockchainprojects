@@ -1,0 +1,49 @@
+#landing__title {
+  color: var(--gray-0);
+  font-family: $interFont;
+  font-weight: var(--font-weight-7);
+  font-size: var(--font-size-fluid-2);
+}
+
+#landing__content {
+  color: var(--gray-0);
+  font-family: $rubikFont;
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-fluid-00);
+}
+
+.mask-custom {
+  backdrop-filter: blur(1px);
+  background-color: rgba(13, 13, 71, 0.5);
+}
+
+// 992px and less
+@media only screen and (max-width: 991px) {
+  #landing__title {
+    font-size: var(--font-size-fluid-3);
+    line-height: var(--font-lineheight-0);
+  }
+
+  #landing__title,
+  #landing__content {
+    z-index: 50;
+  }
+
+  #featurestext__container {
+    position: relative;
+    height: 50vh;
+  }
+  #featurestext__container::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/blockchainillustration-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+  }
+}
