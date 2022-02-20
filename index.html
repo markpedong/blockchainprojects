@@ -15,6 +15,10 @@
       type="image/x-icon"
     />
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
     <!-- Open Props -->
     <link rel="stylesheet" href="https://unpkg.com/open-props" />
 
@@ -33,6 +37,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Bootstrap ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
     <!-- MDB -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
@@ -47,8 +57,14 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/src/css/main.min.css" />
+
+    <!-- Extenal Javascript -->
+    <script type="module" defer src="src/js/script.js"></script>
   </head>
   <body>
+    <!-- Loader -->
+    <div class="lds-hourglass"></div>
+
     <!-- navbar container -->
     <section id="nav__container">
       <nav
@@ -87,7 +103,7 @@
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav ms-auto text-center">
-            <a class="nav-link" id="nav__link" href="#">Product</a>
+            <a class="nav-link" id="nav__link" href="#">Home</a>
             <a class="nav-link" id="nav__link" href="#">Features</a>
             <a class="nav-link" id="nav__link" href="#">About</a>
             <a class="nav-link" id="nav__link" href="#">Contact</a>
@@ -95,10 +111,11 @@
         </div>
       </nav>
     </section>
+
     <!-- Landing Page -->
     <section id="landingpage__container">
       <div class="container-lg pt-lg-5">
-        <div class="row row-cols-1 row-cols-lg-2">
+        <div class="row row-cols-1 row-cols-lg-2 landingandtext__container">
           <div
             class="col d-grid justify-content-center align-items-end"
             id="landingtext__container"
@@ -119,6 +136,70 @@
               src="/src/img/blockchainillustration.svg"
               alt="illustration"
             />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- crypto info -->
+    <section class="overflow-hidden" id="cryptoinfo__container">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center py-5"
+        id="crypto__inner"
+      >
+        <!-- TOTAL CRYPTO MARKET -->
+        <div class="col" id="crypto__container">
+          <i class="bi bi-currency-bitcoin"></i>
+          <div class="crypto__text">
+            <p class="m-0" id="crypto__number">$30B</p>
+            <p id="crypto__description">Digital Currency Exchanged</p>
+          </div>
+        </div>
+        <!-- TOTAL USERS -->
+        <div class="col" id="crypto__container">
+          <i class="bi bi-person-fill"></i>
+          <div class="crypto__text">
+            <p class="m-0" id="crypto__number">10M+</p>
+            <p id="crypto__description">Wallet in the Blockchain</p>
+          </div>
+        </div>
+        <!-- Countries -->
+        <div class="col" id="crypto__container">
+          <i class="bi bi-globe2"></i>
+          <div class="crypto__text">
+            <p class="m-0" id="crypto__number">195</p>
+            <p id="crypto__description">Countries Supported</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features__container">
+      <div class="container-lg pt-lg-5">
+        <div class="row row-cols-1 row-cols-lg-2 landingandtext__container">
+          <div class="col d-none d-lg-block">
+            <img
+              class="img-fluid"
+              src="/src/img/blockchainillustration-2.svg"
+              alt="illustration"
+            />
+          </div>
+          <div
+            class="col d-grid justify-content-end align-items-end"
+            id="featurestext__container"
+          >
+            <p class="text-center text-lg-end" id="landing__title">
+              Why should you be aware of the projects available on different
+              blockchains?
+            </p>
+            <p
+              class="text-center text-lg-end align-self-lg-start"
+              id="landing__content"
+            >
+              Because you'll be able to move tokens and currencies between
+              networks and see where they are listed on major exchanges 
+            </p>
           </div>
         </div>
       </div>

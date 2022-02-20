@@ -1,4 +1,4 @@
-#landingpage__container {
+#features__container {
   background: $backgroundcolor;
 }
 
@@ -33,14 +33,14 @@
     z-index: 50;
   }
 
-  #landingtext__container {
+  #featurestext__container {
     position: relative;
     height: 50vh;
   }
-  #landingtext__container::before {
+  #featurestext__container::before {
     content: "";
     position: absolute;
-    background-image: url("../img/blockchainillustration.svg");
+    background-image: url("../img/blockchainillustration-2.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
