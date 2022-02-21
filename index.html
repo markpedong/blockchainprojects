@@ -225,12 +225,14 @@
     <section id="footer__section">
       <div class="container-fluid" id="footer__container">
         <div class="row">
-          <div class="col-6 col-lg-5">
+          <div
+            class="col-12 col-md-6 col-lg-5 text-center text-lg-start mb-5 mb-md-0"
+          >
             <img
-              class="me-2"
+              class="me-2 mb-2 mb-sm-0"
               src="/src/img/blockchainprojectslogo-white.svg"
               alt="navbrand"
-              id="nav_brand"
+              id="footer__img"
             />
             <a
               class="text-uppercase text-decoration-none text-white me-auto"
@@ -239,7 +241,7 @@
               >blockchain projects</a
             >
           </div>
-          <div class="col-6 col-lg text-center text-lg-start">
+          <div class="col-12 col-md-6 col-lg text-center text-lg-start">
             <p id="footer__header">Quick Links</p>
             <div class="navbar-nav ms-auto">
               <a id="footer__link">Home</a>
@@ -249,9 +251,9 @@
             </div>
           </div>
           <div
-            class="col-lg-4 d-flex d-lg-block justify-content-around text-center text-lg-start py-5 py-lg-0 ms-3 ms-lg-0"
+            class="col-lg-4 d-block d-md-flex d-lg-block justify-content-around text-center text-lg-start py-5 py-lg-0 ms-0 ms-lg-3"
           >
-            <div id="projects__links">
+            <div id="projects__links" class="pb-5 pb-md-0">
               <p id="footer__header">Other Projects:</p>
               <div id="other__projects">
                 <p id="footer__link">Electricity Calculator</p>
@@ -268,12 +270,15 @@
           </div>
         </div>
         <div class="row" id="copyright__container">
-          <div class="col align-self-end">
-            <p id="footer__description">
-              ©2022 Mark Jesson Pedong . All rights reserved
-            </p>
+          <div class="col d-block d-lg-flex p-0 px-sm-1" id="copyright__text">
+            <!-- prettier-ignore -->
+            <p id="footer__description__header">©2022 Mark Jesson Pedong.</p>
+            <p id="footer__description__576">©2022 Mark Pedong.</p>
+            <p id="footer__description">All rights reserved</p>
           </div>
-          <div class="col text-end">
+          <div
+            class="col text-end d-flex align-items-end justify-content-end flex-wrap p-0 px-sm-1"
+          >
             <i id="bi__footer" class="bi-facebook"></i>
             <i id="bi__footer" class="bi-instagram"></i>
             <i id="bi__footer" class="bi-linkedin"></i>
