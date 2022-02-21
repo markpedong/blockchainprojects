@@ -9,14 +9,19 @@
 }
 
 #search__container > input {
-  margin: var(--size-5);
+  margin: var(--size-2);
+  margin-right: var(--size-10);
 }
 
 #searchbar__header {
   font-family: $rubikFont;
   font-weight: var(--font-weight-4);
-  color: var(--indigo-8);
+  color: var(--gray-9);
   width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  background: none;
 }
 
 #search__btn {
@@ -25,4 +30,9 @@
   font-family: $rubikFont;
   border-radius: var(--radius-4);
   padding: var(--size-3) var(--size-8);
+  border: red;
+}
+
+#search__btn:focus,
+#search__btn:active {
 }
