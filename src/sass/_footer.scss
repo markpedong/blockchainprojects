@@ -2,6 +2,14 @@
   background-color: rgba(13, 13, 43, 1);
 }
 
+#footer__brand {
+  font-family: $interFont, sans-serif;
+  font-size: var(--font-size-2);
+  border-left: 2px $solid var(--gray-0);
+  padding-left: var(--size-3);
+  font-weight: var(--font-weight-9);
+}
+
 #footer__header {
   font-family: $rubikFont;
   font-weight: var(--font-weight-5);
@@ -39,5 +47,12 @@
 
   #copyright__container {
     padding-top: var(--size-11);
+  }
+}
+
+// 576px or more
+@media screen and (min-width: 576px) {
+  #footer__container {
+    padding: var(--size-10) var(--size-8);
   }
 }
