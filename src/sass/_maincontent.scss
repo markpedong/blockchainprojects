@@ -1,0 +1,28 @@
+#content__section {
+  background: $contentbackground;
+  height: 100vh;
+}
+#search__container {
+  background-color: var(--gray-0);
+  border-radius: var(--radius-4);
+  padding: var(--size-10) var(--size-8) var(--size-5) var(--size-8);
+}
+
+#search__container > input {
+  margin: var(--size-5);
+}
+
+#searchbar__header {
+  font-family: $rubikFont;
+  font-weight: var(--font-weight-4);
+  color: var(--indigo-8);
+  width: 100%;
+}
+
+#search__btn {
+  background-color: var(--indigo-6);
+  color: var(--gray-0);
+  font-family: $rubikFont;
+  border-radius: var(--radius-4);
+  padding: var(--size-3) var(--size-8);
+}

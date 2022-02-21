@@ -22,6 +22,11 @@
   font-size: var(--font-size-2);
 }
 
+#feature__container {
+  padding-bottom: var(--size-13);
+}
+
+// 991px or less
 @media only screen and (max-width: 991px) {
   #features__header {
     font-weight: var(--font-weight-7);
@@ -29,6 +34,7 @@
   }
 }
 
+// 576px or less
 @media only screen and (max-width: 576px) {
   #features__container {
     padding-top: var(--size-11);
