@@ -30,9 +30,11 @@
   font-family: $rubikFont;
   border-radius: var(--radius-4);
   padding: var(--size-3) var(--size-8);
-  border: red;
+  border: none !important;
 }
 
-#search__btn:focus,
-#search__btn:active {
+#top__crypto__header {
+  font-family: $rubikFont;
+  font-weight: var(--font-weight-5);
+  color: var(--indigo-6);
 }

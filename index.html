@@ -226,17 +226,22 @@
       <div class="container-lg" id="maincontent__container">
         <div class="row">
           <div class="col p-0"></div>
-          <div
-            class="col-10 col-lg-8 d-flex flex-nowrap"
-            id="search__container"
-          >
-            <input
-              type="text"
-              placeholder="eg. Binance Smart Chain, Fantom Network, Avalanche Network"
-              id="searchbar__header"
-              autocomplete="off"
-            />
-            <button id="search__btn" type="submit">Search</button>
+          <div class="col-10 col-lg-8" id="search__container">
+            <form class="d-flex flex-nowrap">
+              <input
+                type="text"
+                placeholder="eg. Binance Smart Chain, Fantom Network, Avalanche Network"
+                id="searchbar__header"
+                autocomplete="off"
+              />
+              <button id="search__btn" type="submit">Search</button>
+            </form>
+
+            <div class="container-fluid p-0 pt-5">
+              <div class="p-0" id="top__crypto">
+                <p id="top__crypto__header">TOP 3 Cryptocurrency</p>
+              </div>
+            </div>
           </div>
           <div class="col p-0"></div>
         </div>
