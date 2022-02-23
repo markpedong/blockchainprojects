@@ -37,6 +37,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/14d7858160.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap ICONS -->
     <link
       rel="stylesheet"
@@ -208,6 +214,58 @@
     <!-- Features -->
     <section id="features__section">
       <div class="container" id="features__container">
+        <div class="container-fluid p-0">
+          <p class="text-center" id="top__crypto__header">
+            TOP 3 CRYPTOCURRENCY
+          </p>
+
+          <div class="container-fluid" id="top__crypto__container">
+            <!-- BITCOIN -->
+            <div class="col text-center" id="top__container">
+              <i class="fa-brands fa-btc" id="fa-brands"></i>
+              <p id="crypto__price">$48,000</p>
+              <div id="cryptotext__container">
+                <p id="crypto__header">Bitcoin</p>
+                <p id="crypto__acronym">BTC</p>
+              </div>
+              <p id="top__crypto__description">
+                Digital currency in which a record of transactions is
+                maintained.
+              </p>
+            </div>
+
+            <!-- Ethereum -->
+            <div class="col text-center" id="top__container">
+              <i class="fa-brands fa-ethereum" id="fa-brands"></i>
+              <p id="crypto__price">$3,000</p>
+
+              <div id="cryptotext__container">
+                <p id="crypto__header">Ethereum</p>
+                <p id="crypto__acronym">ETH</p>
+              </div>
+              <p id="top__crypto__description">
+                Blockchain technology to create and run decentralized digital
+                applications.
+              </p>
+            </div>
+
+            <!-- USD Tether -->
+            <div class="col text-center" id="top__container">
+              <i class="fas fa-dollar-sign" id="fa-brands"></i>
+              <p id="crypto__price">$1</p>
+
+              <div id="cryptotext__container">
+                <p id="crypto__header">Tether</p>
+                <p id="crypto__acronym">USDT</p>
+              </div>
+              <p id="top__crypto__description">
+                Cryptocurrency that enables instant payments to anyone in the
+                world.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="row row-cols-1">
           <div class="col text-center" id="feature__container">
             <p id="features__header">
@@ -226,7 +284,7 @@
       <div class="container-lg" id="maincontent__container">
         <div class="row">
           <div class="col p-0"></div>
-          <div class="col-10 col-lg-8" id="search__container">
+          <div class="col-11 col-lg-10" id="search__container">
             <form class="d-flex flex-nowrap">
               <input
                 type="text"
@@ -236,17 +294,12 @@
               />
               <button id="search__btn" type="submit">Search</button>
             </form>
-
-            <div class="container-fluid p-0 pt-5">
-              <div class="p-0" id="top__crypto">
-                <p id="top__crypto__header">TOP 3 Cryptocurrency</p>
-              </div>
-            </div>
           </div>
           <div class="col p-0"></div>
         </div>
       </div>
     </section>
+
     <!-- footer -->
     <section id="footer__section">
       <div class="container-fluid" id="footer__container">
@@ -261,7 +314,7 @@
               id="footer__img"
             />
             <a
-              class="text-uppercase text-decoration-none text-white me-auto"
+              class="text-uppercase text-decoration-none text-white text-center me-auto"
               id="footer__brand"
               href="#"
               >blockchain projects</a

@@ -1,11 +1,11 @@
 #content__section {
   background: $contentbackground;
-  height: 100vh;
 }
 #search__container {
   background-color: var(--gray-0);
   border-radius: var(--radius-4);
   padding: var(--size-10) var(--size-8) var(--size-5) var(--size-8);
+  transform: translateY(-10vh);
 }
 
 #search__container > input {
@@ -13,8 +13,14 @@
   margin-right: var(--size-10);
 }
 
-#searchbar__header {
+#searchbar__header,
+#search__btn,
+#top__crypto__header,
+#top__container {
   font-family: $rubikFont;
+}
+
+#searchbar__header {
   font-weight: var(--font-weight-4);
   color: var(--gray-9);
   width: 100%;
@@ -27,14 +33,95 @@
 #search__btn {
   background-color: var(--indigo-6);
   color: var(--gray-0);
-  font-family: $rubikFont;
   border-radius: var(--radius-4);
   padding: var(--size-3) var(--size-8);
   border: none !important;
 }
 
 #top__crypto__header {
-  font-family: $rubikFont;
   font-weight: var(--font-weight-5);
-  color: var(--indigo-6);
+  color: var(--gray-0);
+  font-size: var(--font-size-fluid-1);
+}
+
+#top__crypto__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#top__container {
+  background: var(--gray-0);
+  border-radius: var(--radius-4);
+  color: var(--gray-0);
+  transition: all 0.3s ease;
+}
+
+#top__container:hover {
+  background-color: $cryptobackground;
+  color: var(--gray-0);
+
+  #crypto__price,
+  #crypto__header,
+  #top__crypto__description {
+    color: var(--gray-0);
+  }
+}
+
+#crypto__price {
+  color: var(--gray-9);
+  font-weight: var(--font-weight-7);
+  font-size: var(--font-size-fluid-1);
+}
+
+#fa-brands {
+  font-size: var(--font-size-fluid-2);
+  color: var(--gray-0);
+  padding: var(--size-3) var(--size-5);
+  margin: var(--size-8) 0 var(--size-3) 0;
+  border-radius: var(--radius-round);
+}
+
+#crypto__header {
+  color: var(--gray-9);
+  font-weight: var(--font-weight-7);
+  font-size: var(--font-size-fluid-1);
+}
+
+#crypto__acronym {
+  color: var(--gray-5);
+}
+
+#cryptotext__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#top__crypto__description {
+  color: var(--gray-7);
+}
+
+.fa-btc {
+  background-color: $bitcoincolor;
+}
+
+.fa-ethereum {
+  background: var(--indigo-7);
+}
+
+.fa-dollar-sign {
+  background: var(--teal-5);
+}
+
+@media screen and (max-width: 992px) {
+  #top__crypto__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  #top__crypto__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
