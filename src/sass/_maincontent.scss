@@ -9,33 +9,23 @@
   transform: translateY(-10vh);
 }
 
-#search__container > input {
-  margin: var(--size-2);
-  margin-right: var(--size-10);
-}
-
-#searchbar__header,
 #search__btn,
 #top__crypto__header,
 #top__container {
   font-family: $rubikFont;
 }
 
-#searchbar__header {
-  font-weight: var(--font-weight-4);
-  color: var(--gray-9);
-  width: 100%;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  background: none;
+#btn__network {
+  font-family: $poppinsFont, sans-serif;
+  font-weight: var(--font-weight-7);
+  font-size: var(--font-size-fluid-0);
 }
 
 #search__btn {
   background-color: var(--indigo-6);
   color: var(--gray-0);
   border-radius: var(--radius-4);
-  padding: var(--size-fluid-1) var(--size-fluid-4);
+  padding: var(--size-2) var(--size-fluid-5);
   border: none !important;
 }
 
@@ -68,7 +58,7 @@
   font-size: var(--font-size-fluid-2);
   color: var(--gray-0);
   padding: var(--size-3) var(--size-5);
-  margin: var(--size-8) 0 var(--size-3) 0;
+  margin: var(--size-8) 0 var(--size-3);
   border-radius: var(--radius-round);
 }
 

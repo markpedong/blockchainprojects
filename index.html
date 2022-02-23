@@ -69,7 +69,7 @@
   </head>
   <body>
     <!-- Loader -->
-    <div id="lds-hourglass"></div>
+    <!-- <div id="lds-hourglass"></div> -->
 
     <!-- navbar container -->
     <section id="nav__container">
@@ -284,18 +284,37 @@
       <div class="container-lg" id="maincontent__container">
         <div class="row">
           <div class="col p-0"></div>
-          <div class="col-11 col-lg-8" id="search__container">
-            <form class="d-flex flex-nowrap">
-              <input
-                type="text"
-                placeholder="eg. Binance Smart Chain, Fantom Network, Avalanche Network"
-                id="searchbar__header"
-                autocomplete="off"
-              />
-              <button id="search__btn" type="submit">Search</button>
+          <div class="col-11 col-lg-8 container" id="search__container">
+            <form class="row justify-content-center" id="network__container">
+              <div class="col-12 col-lg-9 mb-0">
+                <button
+                  class="btn text-center text-lg-start w-100"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#blockchainNetworks"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                  id="btn__network"
+                >
+                  Please select a network:
+                </button>
+              </div>
+
+              <div class="col-12 col-lg-3 text-center align-self-center p-0">
+                <button id="search__btn" type="submit">Search</button>
+              </div>
+
+              <div
+                class="col-12 collapse order-1 order-lg-5 text-center text-lg-start"
+                id="blockchainNetworks"
+              >
+                <div class="card card-body">Binance Smart Chain</div>
+                <div class="card card-body">Ethereum Network</div>
+                <div class="card card-body">Avalanche Network</div>
+              </div>
             </form>
           </div>
-          <div class="col p-0"></div>
+          <div class="col"></div>
         </div>
       </div>
     </section>
