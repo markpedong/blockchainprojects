@@ -4,7 +4,8 @@
 #search__container {
   background-color: var(--gray-0);
   border-radius: var(--radius-4);
-  padding: var(--size-10) var(--size-8) var(--size-5) var(--size-8);
+  padding: var(--size-fluid-5) var(--size-fluid-3) var(--size-fluid-4)
+    var(--size-fluid-3);
   transform: translateY(-10vh);
 }
 
@@ -34,7 +35,7 @@
   background-color: var(--indigo-6);
   color: var(--gray-0);
   border-radius: var(--radius-4);
-  padding: var(--size-3) var(--size-8);
+  padding: var(--size-fluid-1) var(--size-fluid-4);
   border: none !important;
 }
 
@@ -55,17 +56,6 @@
   border-radius: var(--radius-4);
   color: var(--gray-0);
   transition: all 0.3s ease;
-}
-
-#top__container:hover {
-  background-color: $cryptobackground;
-  color: var(--gray-0);
-
-  #crypto__price,
-  #crypto__header,
-  #top__crypto__description {
-    color: var(--gray-0);
-  }
 }
 
 #crypto__price {
@@ -113,6 +103,19 @@
 
 .fa-dollar-sign {
   background: var(--teal-5);
+}
+
+@media screen and (min-width: 768px) {
+  #top__container:hover {
+    background-color: $cryptobackground;
+    color: var(--gray-0);
+
+    #crypto__price,
+    #crypto__header,
+    #top__crypto__description {
+      color: var(--gray-0);
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
