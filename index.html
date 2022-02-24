@@ -286,7 +286,7 @@
           <div class="col p-0"></div>
           <div class="col-11 col-lg-8 container" id="search__container">
             <form class="row justify-content-center" id="network__container">
-              <div class="col-12 col-lg-9 mb-0">
+              <div class="col-12 col-lg-9 mb-4 mb-lg-0">
                 <button
                   class="btn text-center text-lg-start w-100"
                   type="button"
@@ -297,24 +297,33 @@
                   id="btn__network"
                 >
                   Please select a network:
+
+                  <div
+                    class="collapse text-center text-lg-start mt-3"
+                    id="blockchainNetworks"
+                  >
+                    <!-- prettier-ignore -->
+                    <div class="row row-cols-1 row-cols-lg-2" id="networks__container">
+                      <div id="card__header"><img id="network__logo" src="/src/img/avax.svg" alt="avax">Avalanche</div>
+                      <div id="card__header"><img class="bg-dark" id="network__logo" src="./src/img/bnb.svg" alt="bnb">BSC</div>
+                      <div id="card__header"><img class="bg-white" id="network__logo" src="/src/img/celo.svg" alt="celo">Celo</div>
+                      <div id="card__header"><img class="bg-light" id="network__logo" src="./src/img/eth.svg" alt="eth">Ethereum</div>
+                      <div id="card__header"><img id="network__logo" src="/src/img/ftm.svg" alt="ftm">Fantom</div>
+                      <div id="card__header"><img id="network__logo" src="/src/img/gno.png" alt="gno">Gnosis Chain</div>
+                      <div id="card__header"><img class="bg-white" id="network__logo" src="./src/img/one.svg" alt="one">Harmony One</div>
+                      <div id="card__header"><img class="bg-white" id="network__logo" src="./src/img/matic.svg" alt="matic">Polygon</div>
+                    </div>
+                  </div>
                 </button>
               </div>
-
-              <div class="col-12 col-lg-3 text-center align-self-center p-0">
-                <button id="search__btn" type="submit">Search</button>
-              </div>
-
               <div
-                class="col-12 collapse order-1 order-lg-5 text-center text-lg-start"
-                id="blockchainNetworks"
+                class="col-12 col-lg-3 order-5 order-lg-3 mb-3 text-center align-self-start"
               >
-                <div class="card card-body">Binance Smart Chain</div>
-                <div class="card card-body">Ethereum Network</div>
-                <div class="card card-body">Avalanche Network</div>
+                <button id="search__btn" type="submit">Search</button>
               </div>
             </form>
           </div>
-          <div class="col"></div>
+          <div class="col p-0"></div>
         </div>
       </div>
     </section>

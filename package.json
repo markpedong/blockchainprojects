@@ -1,7 +1,6 @@
 {
   "name": "crypto-project",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
@@ -21,5 +20,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2"
-  }
+  },
+  "main": "index.js",
+  "description": ""
 }
