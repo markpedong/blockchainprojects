@@ -8,7 +8,7 @@
     var(--size-fluid-3);
   transform: translateY(-10vh);
 }
-
+#network__header,
 #search__btn,
 #top__crypto__header,
 #top__container {
@@ -100,8 +100,9 @@
 
 #card__header {
   font-family: $poppinsFont, sans-serif;
-  padding: var(--size-2) var(--font-size-fluid-0);
   border-radius: var(--radius-2);
+  margin-top: var(--size-2);
+  padding: var(--size-2) var(--size-1);
 }
 
 #network__logo {
@@ -121,6 +122,19 @@
     #crypto__header,
     #top__crypto__description {
       color: var(--gray-0);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #card__header {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    text-align: start;
+    align-items: center;
+
+    #network__logo {
+      justify-self: end;
     }
   }
 }

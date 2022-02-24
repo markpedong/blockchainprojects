@@ -1,0 +1,39 @@
+#result__container {
+  border-radius: var(--radius-3);
+}
+
+#network__header__logo {
+  height: var(--size-fluid-4);
+}
+
+#network__header {
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-7);
+}
+
+#head__results,
+#collapse__container {
+  font-family: $interFont, sans-serif;
+  font-weight: var(--font-weight-7);
+}
+
+#token__header {
+  font-family: $rubikFont, sans-serif;
+  font-weight: var(--font-weight-4);
+}
+
+#moredata__logo,
+#collapse__logo {
+  height: var(--size-fluid-2);
+}
+
+#moredata__header {
+  font-family: $poppinsFont, sans-serif;
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-6);
+}
+
+#moredata__content {
+  font-family: $interFont, sans-serif;
+  font-weight: var(--font-weight-5);
+}
