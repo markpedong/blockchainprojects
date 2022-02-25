@@ -22,6 +22,12 @@
   color: var(--gray-0);
 }
 
+#btn__network,
+#crypto__price,
+#crypto__price {
+  font-size: var(--font-size-fluid-1);
+}
+
 #btn__network {
   font-family: $poppinsFont, sans-serif;
   font-weight: var(--font-weight-7);
@@ -37,7 +43,6 @@
 
 #top__crypto__header {
   font-weight: var(--font-weight-5);
-  font-size: var(--font-size-fluid-1);
 }
 
 #top__crypto__container {
@@ -55,20 +60,22 @@
 #crypto__price {
   color: var(--gray-9);
   font-weight: var(--font-weight-7);
-  font-size: var(--font-size-fluid-1);
+}
+
+#fa-brands,
+#network__logo {
+  border-radius: var(--radius-round);
 }
 
 #fa-brands {
   font-size: var(--font-size-fluid-2);
   padding: var(--size-3) var(--size-5);
   margin: var(--size-8) 0 var(--size-3);
-  border-radius: var(--radius-round);
 }
 
 #crypto__header {
   color: var(--gray-9);
   font-weight: var(--font-weight-7);
-  font-size: var(--font-size-fluid-1);
 }
 
 #crypto__acronym {
@@ -109,7 +116,6 @@
   height: var(--size-fluid-3);
   margin-right: var(--size-2);
   border: 1px solid var(--gray-4);
-  border-radius: var(--radius-round);
 }
 
 @media screen and (min-width: 768px) {

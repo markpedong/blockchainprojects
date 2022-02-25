@@ -11,15 +11,74 @@
   font-weight: var(--font-weight-7);
 }
 
-#head__results,
+// This is for the header
+#coin__number,
+#coin__name,
+#coin__price__header,
+#coin__volume__header,
+#coin__marketcap__header,
+#coin__moreinformation__header {
+  padding: var(--size-3) 0;
+  border: 1px rgba(128, 128, 128, 0.5);
+  border-style: solid none;
+}
+
+// This is for the List item
+#number__item,
+#name__item,
+#price__item,
+#volume__item,
+#marketcap__item,
+#moreinfo__item {
+  padding: var(--size-2) 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+#name__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #result__logo {
+    height: var(--size-4);
+    margin-right: var(--size-2);
+  }
+
+  #result__name {
+    margin-bottom: 0;
+  }
+}
+
+#moreinfo__button {
+  margin: var(--size-2) 0;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: inherit;
+}
+
+#collapse__container {
+  border: 1px rgba(128, 128, 128, 0.5);
+  border-style: solid none;
+}
+
 #collapse__container {
   font-family: $interFont, sans-serif;
   font-weight: var(--font-weight-7);
 }
 
+#token__container,
+#collapse__market {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
 #token__header {
   font-family: $rubikFont, sans-serif;
   font-weight: var(--font-weight-4);
+}
+
+#networkmarket__logo {
+  height: var(--size-4);
 }
 
 #moredata__logo,
@@ -36,4 +95,13 @@
 #moredata__content {
   font-family: $interFont, sans-serif;
   font-weight: var(--font-weight-5);
+}
+
+@media screen and (max-width: 576px) {
+  #coin__price,
+  #coin__volume,
+  #coin__marketcap,
+  #coin__moreinformation {
+    width: 100%;
+  }
 }

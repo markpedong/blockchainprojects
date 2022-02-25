@@ -280,8 +280,10 @@
     </section>
 
     <!-- MAIN CONTENT SECTION -->
-    <section id="content__section">
-      <div class="container-lg pb-5" id="maincontent__container">
+    <section id="content__section" class="pb-5">
+      <!-- Container for the Networks available -->
+      <div class="container-lg pb-5">
+        <!-- Selection of Tabs -->
         <div class="row">
           <div class="col"></div>
           <div class="col-10 col-lg-8 container" id="search__container">
@@ -323,196 +325,129 @@
           </div>
           <div class="col"></div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="container-lg bg-white" id="result__container">
-            <div
-              class="d-flex justify-content-center align-items-center mb-5 mt-5"
-              id="header__container"
-            >
-              <img
-                class="me-3"
-                id="network__header__logo"
-                src="./src/img/avax.svg"
-                alt="avax"
-              />
-              <p class="text-center mb-0 text-uppercase" id="network__header">
-                avalanche network
-              </p>
+      <!-- Results Container -->
+      <div class="container-lg bg-white" id="result__container">
+        <!-- Header for the Network -->
+        <div
+          class="d-flex justify-content-center align-items-center py-5"
+          id="header__container"
+        >
+          <img
+            class="me-3"
+            id="network__header__logo"
+            src="./src/img/avax.svg"
+            alt="avax"
+          />
+          <p class="text-center mb-0 text-uppercase" id="network__header">
+            avalanche
+          </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="pb-3" id="results">
+          <!-- Header Content  -->
+          <div
+            class="row row-cols-6 text-center align-items-start"
+            id="coins__container"
+          >
+            <!-- Number -->
+            <div class="col-2 col-md-1 col-lg-1 p-0" id="number__coin">
+              <p class="mb-0" id="coin__number">#</p>
+              <ul class="list-unstyled">
+                <li id="number__item">1</li>
+                <li id="number__item">1</li>
+              </ul>
             </div>
-            <div class="results">
-              <div
-                class="container d-flex justify-content-center align-items-center text-center pb-4"
-                id="head__results"
-              >
-                <div class="col-1">#</div>
-                <div class="col-2">Coin</div>
-                <div class="col-2">Price</div>
-                <div class="col-2">Volume</div>
-                <div class="col-3">Market Cap</div>
-                <div class="col-2">Market / Withdrawal Fees</div>
-              </div>
-              <ul class="ps-0 list-unstyled" id="result__content">
-                <li class="m-0">
-                  <div
-                    class="container d-flex justify-content-center align-items-center text-center py-1"
-                    id="token__container"
-                  >
-                    <div id="token__header" class="col-1">1</div>
-                    <div id="token__header" class="col-2">Bitcoin</div>
-                    <div id="token__header" class="col-2">$48,000</div>
-                    <div id="token__header" class="col-2">$27,000,000,000</div>
-                    <div id="token__header" class="col-3">$666,000,000,000</div>
-                    <div id="token__header" class="col-2">
-                      <button
-                        class="btn text-center w-100"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#resultMarket"
-                        aria-expanded="false"
-                        aria-controls="collapseExample"
-                      >
-                        View more:
-                      </button>
-                    </div>
-                  </div>
-                  <div class="collapse container mt-4" id="resultMarket">
-                    <div
-                      class="d-flex justify-content-center align-items-center"
-                      id="result__header"
-                    >
-                      <img
-                        class="me-2"
-                        id="moredata__logo"
-                        src="./src/img/btc.svg"
-                        alt="btc"
-                      />
-                      <p class="my-3 text-uppercase" id="moredata__header">
-                        Bitcoin Market
-                      </p>
-                    </div>
-                    <div
-                      class="container row justify-content-center text-center p-0 pb-3 m-0"
-                      id="collapse__container"
-                    >
-                      <div class="col-1">#</div>
-                      <div class="col-3">Market:</div>
-                      <div class="col-6 row">
-                        <p class="col-7 mb-0">
-                          What network can it be withdrawn?
-                        </p>
-                        <p class="col-5 mb-0">Withdrawal Fee:</p>
-                      </div>
-                    </div>
-                    <ul class="p-0 list-unstyled" id="moredata__content">
-                      <li
-                        class="container row justify-content-center align-items-center text-center p-0 m-0"
-                      >
-                        <div class="col-1">1</div>
-                        <div
-                          class="col-3 d-flex justify-content-center align-items-center"
-                        >
-                          <img
-                            class="me-2"
-                            id="collapse__logo"
-                            src="/src/img/bnb.svg"
-                            alt="bnb"
-                          />
-                          <p class="mb-0">Binance</p>
-                        </div>
-                        <div class="col-6 row">
-                          <ul class="list-unstyled col-7 container">
-                            <li class="row py-1">
-                              <div class="col-4"></div>
-                              <img
-                                class="col-1 p-0"
-                                id="collapse__logo"
-                                src="/src/img/eth.svg"
-                                alt="eth"
-                              />
-                              <p class="col-7 mb-0 text-start">Ethereum</p>
-                            </li>
-                            <li class="row py-1">
-                              <div class="col-4"></div>
-                              <img
-                                class="col-1 p-0"
-                                id="collapse__logo"
-                                src="/src/img/btc.svg"
-                                alt="btc"
-                              />
-                              <p class="col-7 mb-0 text-start">Bitcoin</p>
-                            </li>
-                            <li class="row py-1">
-                              <div class="col-4"></div>
-                              <img
-                                class="col-1 p-0"
-                                id="collapse__logo"
-                                src="/src/img/avax.svg"
-                                alt="avax"
-                              />
-                              <p class="col-7 mb-0 text-start">Avalanche</p>
-                            </li>
-                            <li class="row py-1">
-                              <div class="col-4"></div>
-                              <img
-                                class="col-1 p-0"
-                                id="collapse__logo"
-                                src="/src/img/ftm.svg"
-                                alt="ftm"
-                              />
-                              <p class="col-7 mb-0 text-start">Fantom</p>
-                            </li>
-                          </ul>
-                          <ul class="list-unstyled col-5 container">
-                            <li class="row py-1">
-                              <p class="mb-0 col-7 text-end">0.25</p>
-                              <img
-                                class="col-1 p-0"
-                                id="moredata__logo"
-                                src="/src/img/eth.svg"
-                                alt="eth"
-                              />
-                              <div class="col-4"></div>
-                            </li>
-                            <li class="row py-1">
-                              <p class="mb-0 col-7 text-end">0.01</p>
-                              <img
-                                class="col-1 p-0"
-                                id="moredata__logo"
-                                src="/src/img/btc.svg"
-                                alt="btc"
-                              />
-                            </li>
 
-                            <div class="col-4"></div>
-
-                            <li class="row py-1">
-                              <p class="mb-0 col-7 text-end">0.05</p>
-                              <img
-                                class="col-1 p-0"
-                                id="moredata__logo"
-                                src="/src/img/avax.svg"
-                                alt="avax"
-                              />
-                              <div class="col-4"></div>
-                            </li>
-                            <li class="row py-1">
-                              <p class="mb-0 col-7 text-end">0.05</p>
-                              <img
-                                class="col-1 p-0"
-                                id="moredata__logo"
-                                src="/src/img/ftm.svg"
-                                alt="ftm"
-                              />
-                              <div class="col-4"></div>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+            <!-- Name -->
+            <div class="col-4 col-md-3 col-lg-2 p-0" id="number__title">
+              <p class="mb-0" id="coin__name">Coin</p>
+              <ul class="list-unstyled">
+                <li id="name__item">
+                  <img id="result__logo" src="./src/img/btc.svg" alt="btc" />
+                  <p id="result__name">Bitcoin</p>
+                </li>
+                <li id="name__item">
+                  <img id="result__logo" src="./src/img/btc.svg" alt="btc" />
+                  <p id="result__name">Bitcoin</p>
                 </li>
               </ul>
+            </div>
+
+            <!-- Container that scrolled on breakpoints -->
+            <div
+              class="col-6 col-md-8 col-lg-9 p-0 d-flex align-items-start overflow-auto"
+              id="scrolling__container"
+            >
+              <!-- Price -->
+              <div class="col-9 col-sm-8 col-md-4 col-lg-3" id="coin__price">
+                <p class="mb-0" id="coin__price__header">Price</p>
+                <ul class="list-unstyled">
+                  <li id="price__item">$38,000</li>
+                  <li id="price__item">$38,000</li>
+                </ul>
+              </div>
+
+              <!-- Volume  -->
+              <div class="col-9 col-sm-8 col-md-4 col-lg-3" id="coin__volume">
+                <p class="mb-0" id="coin__volume__header">Volume</p>
+                <ul class="list-unstyled">
+                  <li id="volume__item">$999,000,000,000</li>
+                  <li id="volume__item">$999,000,000,000</li>
+                </ul>
+              </div>
+
+              <!-- market cap -->
+              <div
+                class="col-9 col-sm-8 col-md-4 col-lg-3"
+                id="coin__marketcap"
+              >
+                <p class="mb-0" id="coin__marketcap__header">Market Cap</p>
+                <ul class="list-unstyled">
+                  <li id="marketcap__item">$999,000,000,000</li>
+                  <li id="marketcap__item">$999,000,000,000</li>
+                </ul>
+              </div>
+
+              <!-- More Information -->
+              <div
+                class="col-9 col-sm-8 col-md-4 col-lg-3"
+                id="coin__moreinformation"
+              >
+                <p class="mb-0" id="coin__moreinformation__header">
+                  More Information
+                </p>
+                <ul class="list-unstyled">
+                  <li class="p-0" id="moreinfo__item">
+                    <button
+                      class="text-center"
+                      id="moreinfo__button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#resultMarket"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      View more:
+                    </button>
+                  </li>
+                  <li class="p-0" id="moreinfo__item">
+                    <button
+                      class="text-center"
+                      id="moreinfo__button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#resultMarket2"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      View more:
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
