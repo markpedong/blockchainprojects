@@ -21,6 +21,7 @@
   padding: var(--size-3) 0;
   border: 1px rgba(128, 128, 128, 0.5);
   border-style: solid none;
+  margin-bottom: 0;
 }
 
 // This is for the List item
@@ -50,7 +51,7 @@
 }
 
 #moreinfo__button {
-  margin: var(--size-2) 0;
+  margin: 0;
   background: none;
   border: none;
   padding: 0;
