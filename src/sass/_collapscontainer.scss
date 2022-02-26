@@ -36,7 +36,7 @@
 
 #table__header {
   text-align: center;
-  padding: var(--size-3) 0;
+  padding: var(--size-3) var(--size-1);
   border: 1px rgba(255, 255, 255, 0.7);
   border-style: solid none;
   font-family: $rubikFont;
@@ -45,9 +45,10 @@
 
 #table__content__container {
   font-family: $poppinsFont, sans-serif;
-
-  padding: var(--size-3) var(--size-2);
+  font-weight: var(--font-weight-5);
+  padding: var(--size-3) var(--size-1);
   text-align: center;
+  white-space: nowrap;
 }
 
 #table__list__container {
@@ -70,5 +71,28 @@
   #table__list_name {
     margin-bottom: 0;
     text-align: left;
+  }
+}
+
+#table__outer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+// 992px and more
+
+@media screen and (min-width: 992px) {
+  #table__container {
+    overflow: hidden;
+  }
+}
+
+// from 992px and until 1200px
+@media (min-width: 992px) and (max-width: 1200px) {
+  #table__list__container {
+    display: block;
+  }
+
+  .table__list {
+    margin-bottom: var(--size-3);
   }
 }
