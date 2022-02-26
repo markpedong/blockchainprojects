@@ -1,0 +1,74 @@
+// This is for the collapsing container
+
+#btn__collapse {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-0);
+  border: none;
+  font-size: var(--font-size-fluid-2);
+}
+
+#collapse__logo {
+  height: var(--size-fluid-4);
+  margin-right: var(--size-fluid-1);
+}
+#collapse__header {
+  font-family: $rubikFont;
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-5);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#coin__informationheader {
+  font-family: $rubikFont;
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-7);
+}
+
+#coin__information {
+  font-family: $interFont;
+}
+
+#table__container > * {
+  color: var(--gray-0);
+}
+
+#table__header {
+  text-align: center;
+  padding: var(--size-3) 0;
+  border: 1px rgba(255, 255, 255, 0.7);
+  border-style: solid none;
+  font-family: $rubikFont;
+  text-transform: uppercase;
+}
+
+#table__content__container {
+  font-family: $poppinsFont, sans-serif;
+
+  padding: var(--size-3) var(--size-2);
+  text-align: center;
+}
+
+#table__list__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-2);
+}
+
+.table__list {
+  display: flex;
+
+  #table__logo {
+    height: var(--size-5);
+    margin: 0 var(--size-3);
+    border: 2px solid white;
+    border-radius: var(--radius-round);
+    background-color: var(--gray-0);
+  }
+
+  #table__list_name {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}

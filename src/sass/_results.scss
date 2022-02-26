@@ -22,7 +22,10 @@
 #coin__moreinformation__header,
 #coin__pair__header,
 #coin__networks__header,
-#coin__withdrawal__header {
+#coin__withdrawal__header,
+#coin__market,
+#coin__pair,
+#coin__fee {
   padding: var(--size-3) 0;
   border: 1px rgba(255, 255, 255, 0.7);
   border-style: solid none;
@@ -31,12 +34,18 @@
   font-family: $rubikFont;
 }
 
+#market__list__container {
+  padding: 0;
+  padding: var(--size-3) 0;
+}
+
 // This is for the List item
+#number__list,
+#market__list,
 #price__list,
 #volume__list,
 #marketcap__list,
 #moreinfo__list,
-//#networks__list,
 #withdrawal__list {
   list-style: none;
   display: block;
@@ -59,7 +68,7 @@
   width: 100%;
   font-family: $interFont;
 }
-
+#number__content,
 #price__content,
 #volume__content,
 #marketcap__content,
@@ -87,6 +96,40 @@
   }
 }
 
+#network__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#fee__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#market__collapse__container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#market__collapse {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  #market__logo {
+    height: var(--size-5);
+    margin: 0 var(--size-3);
+    border: 2px solid white;
+    border-radius: var(--radius-round);
+    background-color: var(--gray-0);
+  }
+
+  #market__content {
+    margin-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
 #moreinfo__button,
 #collapse__button {
   margin: 0;
@@ -95,36 +138,4 @@
   padding: 0;
   outline: inherit;
   color: var(--gray-0);
-}
-
-// This is for the collapsing container
-
-#btn__collapse {
-  margin: 0;
-  padding: 0;
-  color: var(--gray-0);
-  border: none;
-  font-size: var(--font-size-fluid-2);
-}
-
-#collapse__logo {
-  height: var(--size-fluid-4);
-  margin-right: var(--size-fluid-1);
-}
-#collapse__header {
-  font-family: $rubikFont;
-  font-size: var(--font-size-fluid-2);
-  font-weight: var(--font-weight-5);
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-#coin__informationheader {
-  font-family: $rubikFont;
-  font-size: var(--font-size-fluid-1);
-  font-weight: var(--font-weight-7);
-}
-
-#coin__information {
-  font-family: $interFont;
 }
