@@ -321,7 +321,7 @@
       </div>
 
       <!-- Results Container -->
-      <div class="container-lg bg-white" id="result__container">
+      <div class="container-lg" id="result__container">
         <!-- Header for the Network -->
         <div
           class="d-flex justify-content-center align-items-center py-5"
@@ -342,74 +342,97 @@
         <div>
           <div class="row d-flex p-0">
             <!-- Header -->
-            <div class="col-2 p-0">
+            <div class="col-1 p-0">
               <p id="coin__number" class="mb-0 text-center">#</p>
+              <!-- THIS IS FOR THE NUMBER -->
               <ul class="list-unstyled">
                 <!-- Coin Number -->
                 <li id="number__item">
                   <p class="mb-0 text-center">1</p>
                 </li>
+                <li id="number__item">
+                  <p class="mb-0 text-center">1</p>
+                </li>
               </ul>
             </div>
-            <div class="col-3 p-0">
-              <p id="coin__name" class="mb-0 text-center">#</p>
+            <div class="col-5 col-sm-4 col-lg-3 p-0">
+              <p id="coin__name" class="mb-0 text-center">Coin:</p>
+              <!-- THIS IS FOR THE NAME OF COIN -->
               <ul class="list-unstyled">
                 <li id="name__item">
                   <img id="result__logo" src="/src/img/btc.svg" alt="btc" />
-                  <p class="mb-0">Bitcoin</p>
+                  <p class="col-10" id="result__name">Bitcoin</p>
+                </li>
+                <li id="name__item">
+                  <img id="result__logo" src="/src/img/btc.svg" alt="btc" />
+                  <p class="col-10" id="result__name">Bitcoin</p>
                 </li>
               </ul>
             </div>
             <!-- Header and Main result -->
-            <div class="col-7 overflow-auto p-0">
+            <div class="col-6 col-sm-7 col-lg-8 overflow-auto p-0">
               <!-- Header  and Result -->
               <ul class="list-unstyled d-flex text-center">
                 <!-- Price List -->
-                <li class="col-5">
+                <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+                  <!-- Price Header -->
                   <p id="coin__price__header">Price</p>
-                  <ul
-                    class="list-unstyled d-flex w-100 justify-content-center align-items-center"
-                  >
-                    <li class="col-5 w-100" id="price__item">
-                      <p class="mb-0">$999,000,000,000</p>
+                  <ul id="price__list">
+                    <!-- Price Item-->
+                    <li class="col-5" id="price__item">
+                      <p id="price__content">$999,000,000,000</p>
+                    </li>
+                    <li class="col-5" id="price__item">
+                      <p id="price__content">$999,000,000,000</p>
                     </li>
                   </ul>
                 </li>
+
                 <!-- Volume List -->
-                <li class="col-5">
+                <li class="col-12 col-sm-6 col-md-5 col-lg-3">
                   <p id="coin__volume__header">Volume</p>
-                  <ul
-                    class="list-unstyled d-flex w-100 justify-content-center align-items-center"
-                  >
-                    <li class="col-5 w-100" id="volume__item">
-                      <p class="mb-0">$999,000,000,000</p>
+                  <ul id="volume__list">
+                    <!-- Volume item -->
+                    <li class="col-5" id="volume__item">
+                      <p id="volume__content">$999,000,000,000</p>
+                    </li>
+                    <li class="col-5" id="volume__item">
+                      <p id="volume__content">$999,000,000,000</p>
                     </li>
                   </ul>
                 </li>
                 <!-- market Cap list -->
-                <li class="col-5">
-                  <p id="coin__marketcap__header">Market Cap</p>
-                  <ul
-                    class="list-unstyled d-flex w-100 justify-content-center align-items-center"
-                  >
-                    <li class="col-5 w-100" id="marketcap__item">
-                      <p class="mb-0">$999,000,000,000</p>
+                <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+                  <p id="coin__marketcap__header">Mkt Cap</p>
+                  <ul id="marketcap__list">
+                    <!-- Marketcap Item -->
+                    <li class="col-5" id="marketcap__item">
+                      <p id="marketcap__content">$999,000,000,000</p>
+                    </li>
+                    <li class="col-5" id="marketcap__item">
+                      <p id="marketcap__content">$999,000,000,000</p>
                     </li>
                   </ul>
                 </li>
-                <li class="col-5">
-                  <p id="coin__moreinformation__header">More Information</p>
-                  <ul
-                    class="list-unstyled d-flex w-100 justify-content-center align-items-center"
-                  >
-                    <li class="col-5 w-100" id="moreinfo__item">
+                <!-- More information list -->
+                <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+                  <p id="coin__moreinformation__header">More Info.</p>
+                  <ul id="moreinfo__list">
+                    <!-- More info item -->
+                    <li class="col-5" id="moreinfo__item">
                       <button
-                        type="button"
                         id="moreinfo__button"
                         data-toggle="collapse"
                         data-target="#collapseExample"
-                        aria-expanded="false"
-                        aria-controls="collapseExample"
+                      >
+                        View more
+                      </button>
+                    </li>
+                    <li class="col-5" id="moreinfo__item">
+                      <button
+                        id="moreinfo__button"
+                        data-toggle="collapse"
+                        data-target="#collapseExample1"
                       >
                         View more
                       </button>
@@ -419,16 +442,72 @@
               </ul>
             </div>
             <!-- Collapsable List -->
-            <div class="container">
+            <div class="container p-0">
               <ul class="list-unstyled">
                 <!-- Collapsable Body -->
                 <li>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident.
+                  <div class="collapse show container" id="collapseExample">
+                    <div class="row">
+                      <!-- Header and Button -->
+                      <div
+                        class="col-1 p-0 d-flex justify-content-start align-items-center"
+                      >
+                        <button id="collapse__button">
+                          <i
+                            class="bi bi-arrow-left-circle-fill"
+                            id="btn__collapse"
+                          ></i>
+                        </button>
+                      </div>
+                      <div
+                        class="col-12 p-0 d-flex justify-content-center align-items-center"
+                      >
+                        <img
+                          id="collapse__logo"
+                          src="./src/img/btc.svg"
+                          alt="btc"
+                        />
+                        <p class="text-center" id="collapse__header">Bitcoin</p>
+                      </div>
+                      <!-- Coin Information -->
+                      <div class="col-12 py-3 px-0">
+                        <p id="coin__informationheader">
+                          What Is Bitcoin (BTC)?
+                        </p>
+                        <p id="coin__information">
+                          Bitcoin is a decentralized cryptocurrency originally
+                          described in a 2008 whitepaper by a person, or group
+                          of people, using the alias Satoshi Nakamoto. It was
+                          launched soon after, in January 2009.
+                        </p>
+                        <p id="coin__information">
+                          Bitcoin is a peer-to-peer online currency, meaning
+                          that all transactions happen directly between equal,
+                          independent network participants, without the need for
+                          any intermediary to permit or facilitate them. Bitcoin
+                          was created, according to Nakamoto’s own words, to
+                          allow “online payments to be sent directly from one
+                          party to another without going through a financial
+                          institution.”
+                        </p>
+                        <p id="coin__information">
+                          Some concepts for a similar type of a decentralized
+                          electronic currency precede BTC, but Bitcoin holds the
+                          distinction of being the first-ever cryptocurrency to
+                          come into actual use.
+                        </p>
+                      </div>
+
+                      <!-- Bitcoin Markets -->
+                      <div class="col-12 p-0">
+                        <p id="coin__informationheader">Bitcoin Markets</p>
+                      </div>
+                      <div class="col-12 p-0">
+                        <p id="coin__information">
+                          Where they are listed and how much are the withdrawal
+                          fees to a certain network.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -447,7 +526,7 @@
             class="col-12 col-md-6 col-lg-5 text-center text-lg-start mb-5 mb-md-0"
           >
             <img
-              class="me-2 mb-2 mb-sm-0"
+              class="me mb-2 mb-sm-0"
               src="/src/img/blockchainprojectslogo-white.svg"
               alt="navbrand"
               id="footer__img"

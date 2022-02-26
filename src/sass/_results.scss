@@ -1,5 +1,7 @@
 #result__container {
   border-radius: var(--radius-3);
+  background: $backgroundcolor;
+  color: var(--gray-0);
 }
 
 #network__header__logo {
@@ -17,92 +19,112 @@
 #coin__price__header,
 #coin__volume__header,
 #coin__marketcap__header,
-#coin__moreinformation__header {
+#coin__moreinformation__header,
+#coin__pair__header,
+#coin__networks__header,
+#coin__withdrawal__header {
   padding: var(--size-3) 0;
-  border: 1px rgba(128, 128, 128, 0.5);
+  border: 1px rgba(255, 255, 255, 0.7);
   border-style: solid none;
   margin-bottom: 0;
+  cursor: default;
+  font-family: $rubikFont;
 }
 
 // This is for the List item
+#price__list,
+#volume__list,
+#marketcap__list,
+#moreinfo__list,
+//#networks__list,
+#withdrawal__list {
+  list-style: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 #number__item,
 #name__item,
 #price__item,
 #volume__item,
 #marketcap__item,
-#moreinfo__item {
+#moreinfo__item,
+#pair__item,
+#network__item,
+#withdrawal__item {
   padding: var(--size-2) 0;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  width: 100%;
+  font-family: $interFont;
+}
+
+#price__content,
+#volume__content,
+#marketcap__content,
+#pair__content,
+#network__content,
+#withdrawal__content {
+  margin-bottom: 0;
 }
 
 #name__item {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   #result__logo {
-    height: var(--size-4);
-    margin-right: var(--size-2);
+    height: var(--size-5);
+    margin: 0 var(--size-3);
+    border: 2px solid white;
+    border-radius: var(--radius-round);
+    background-color: var(--gray-0);
   }
 
   #result__name {
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
-#moreinfo__button {
+#moreinfo__button,
+#collapse__button {
   margin: 0;
   background: none;
   border: none;
   padding: 0;
   outline: inherit;
+  color: var(--gray-0);
 }
 
-#collapse__container {
-  border: 1px rgba(128, 128, 128, 0.5);
-  border-style: solid none;
+// This is for the collapsing container
+
+#btn__collapse {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-0);
+  border: none;
+  font-size: var(--font-size-fluid-2);
 }
 
-#collapse__container {
-  font-family: $interFont, sans-serif;
+#collapse__logo {
+  height: var(--size-fluid-4);
+  margin-right: var(--size-fluid-1);
+}
+#collapse__header {
+  font-family: $rubikFont;
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-5);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#coin__informationheader {
+  font-family: $rubikFont;
+  font-size: var(--font-size-fluid-1);
   font-weight: var(--font-weight-7);
 }
 
-#token__container,
-#collapse__market {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-}
-
-#token__header {
-  font-family: $rubikFont, sans-serif;
-  font-weight: var(--font-weight-4);
-}
-
-#networkmarket__logo {
-  height: var(--size-4);
-}
-
-#moredata__logo,
-#collapse__logo {
-  height: var(--size-fluid-2);
-}
-
-#moredata__header {
-  font-family: $poppinsFont, sans-serif;
-  font-size: var(--font-size-fluid-1);
-  font-weight: var(--font-weight-6);
-}
-
-#moredata__content {
-  font-family: $interFont, sans-serif;
-  font-weight: var(--font-weight-5);
-}
-
-@media screen and (max-width: 576px) {
-  #coin__price,
-  #coin__volume,
-  #coin__marketcap,
-  #coin__moreinformation {
-    width: 100%;
-  }
+#coin__information {
+  font-family: $interFont;
 }
