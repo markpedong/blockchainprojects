@@ -66,6 +66,7 @@
   border-left: 2px $solid var(--gray-0);
   padding-left: var(--size-3);
   font-weight: var(--font-weight-9);
+  cursor: auto;
 }
 
 #nav__link {
@@ -73,6 +74,7 @@
   margin: 0 var(--size-3);
   font-family: $rubikFont, sans-serif;
   border-radius: var(--radius-2);
+  cursor: pointer;
 }
 
 #nav__link:hover {

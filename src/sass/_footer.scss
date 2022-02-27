@@ -21,13 +21,34 @@
   font-size: var(--font-size-fluid-1);
 }
 
+#footer__links {
+  cursor: pointer;
+}
+
 #footer__link {
   font-family: $rubikFont;
   font-weight: var(--font-weight-4);
   color: var(--gray-0);
   font-size: var(--font-size-fluid-0);
-  padding-top: var(--size-3);
   margin: 0;
+  padding: var(--size-2) var(--size-2) var(--size-2) var(--size-1);
+  border-radius: var(--radius-2);
+}
+
+.footer__span {
+  padding: var(--size-2) var(--size-2) var(--size-2) var(--size-1);
+  border-radius: var(--radius-2);
+  transition: all 0.2s ease;
+  color: var(--gray-0);
+}
+
+.footer__span:hover {
+  background-color: var(--gray-0);
+  color: $backgroundcolor;
+}
+
+#other__projects {
+  cursor: pointer;
 }
 
 #footer__description,

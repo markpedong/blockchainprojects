@@ -68,7 +68,7 @@
   </head>
   <body>
     <!-- Loader -->
-    <!-- <div id="lds-hourglass"></div> -->
+    <div id="lds-hourglass"></div>
 
     <!-- navbar container -->
     <section id="nav__container">
@@ -108,10 +108,9 @@
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav ms-auto text-center">
-            <a class="nav-link" id="nav__link" href="#">Home</a>
-            <a class="nav-link" id="nav__link" href="#">Features</a>
-            <a class="nav-link" id="nav__link" href="#">About</a>
-            <a class="nav-link" id="nav__link" href="#">Contact</a>
+            <a class="nav-link home__nav" id="nav__link">Home</a>
+            <a class="nav-link projects__nav" id="nav__link">Projects</a>
+            <a class="nav-link contact__nav" id="nav__link">Contact</a>
           </div>
         </div>
       </nav>
@@ -179,7 +178,7 @@
       </div>
     </section>
 
-    <!-- Landing Page -->
+    <!-- Landing Page 2-->
     <section id="landingpage__container">
       <div class="container-lg pt-lg-5">
         <div class="row row-cols-1 row-cols-lg-2 landingandtext__container">
@@ -686,11 +685,16 @@
           </div>
           <div class="col-12 col-md-6 col-lg text-center text-lg-start">
             <p id="footer__header">Quick Links</p>
-            <div class="navbar-nav ms-auto">
-              <a id="footer__link">Home</a>
-              <a id="footer__link">Features</a>
-              <a id="footer__link">About</a>
-              <a id="footer__link">Contact</a>
+            <div class="navbar-nav ms-auto" id="footer__links">
+              <a class="home__footer" id="footer__link"
+                ><span class="footer__span">Home</span></a
+              >
+              <a class="projects__footer" id="footer__link"
+                ><span class="footer__span">Projects</span></a
+              >
+              <a class="contact__footer" id="footer__link"
+                ><span class="footer__span"> Contact </span></a
+              >
             </div>
           </div>
           <div
@@ -699,15 +703,30 @@
             <div id="projects__links" class="pb-5 pb-md-0">
               <p id="footer__header">Other Projects:</p>
               <div id="other__projects">
-                <p id="footer__link">Electricity Calculator</p>
-                <p id="footer__link">Recipe App</p>
+                <p id="footer__link">
+                  <a href="https://elec-calculator.web.app/" target="_blank">
+                    <span class="footer__span">Electricity Calculator</span></a
+                  >
+                </p>
+                <p id="footer__link">
+                  <a
+                    href="https://forkify-mark-project.netlify.app"
+                    target="_blank"
+                  >
+                    <span class="footer__span">Recipe App</span></a
+                  >
+                </p>
               </div>
             </div>
             <div id="portfolio__website">
               <p class="pt-lg-5" id="footer__header">Portfolio Website</p>
               <div id="website">
                 <p id="footer__link">Visit my website:</p>
-                <p id="footer__link">markpedong.com</p>
+                <p id="footer__link">
+                  <a href="https://markpedong.com" target="_blank">
+                    <span class="footer__span">markpedong.com</span></a
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -715,18 +734,19 @@
         <div class="row" id="copyright__container">
           <div class="col d-block d-lg-flex p-0 px-sm-1" id="copyright__text">
             <!-- prettier-ignore -->
-            <p id="footer__description__header">©2022 Mark Jesson Pedong.</p>
-            <p id="footer__description__576">©2022 Mark Pedong.</p>
+            <p class="me-2" id="footer__description__header">©2022 Mark Jesson Pedong.</p>
+            <p class="me-2" id="footer__description__576">©2022 Mark Pedong.</p>
             <p id="footer__description">All rights reserved</p>
           </div>
           <div
             class="col text-end d-flex align-items-end justify-content-end flex-wrap p-0 px-sm-1"
           >
-            <i id="bi__footer" class="bi-facebook"></i>
-            <i id="bi__footer" class="bi-instagram"></i>
-            <i id="bi__footer" class="bi-linkedin"></i>
-            <i id="bi__footer" class="bi-twitter"></i>
-            <i id="bi__footer" class="bi-github"></i>
+            <a href="https://www.linkedin.com/in/markpedong/" target="_blank">
+              <i id="bi__footer" class="bi-linkedin"> </i>
+            </a>
+            <a href="https://github.com/markpedong" target="_blank">
+              <i id="bi__footer" class="bi-github"></i>
+            </a>
           </div>
         </div>
       </div>
