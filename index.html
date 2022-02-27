@@ -296,7 +296,7 @@
                   aria-controls="#blockchainNetworks"
                   id="btn__network"
                 >
-                  select a network:
+                  <p class="mb-0" id="select__network">select a network:</p>
 
                   <!-- prettier-ignore -->
                   <div
@@ -347,7 +347,7 @@
         <div>
           <div class="row d-flex p-0">
             <!-- Header -->
-            <div class="col-1 p-0">
+            <div id="coin__container" class="col-1 p-0">
               <p id="coin__number" class="mb-0 text-center">#</p>
               <!-- THIS IS FOR THE NUMBER -->
               <ul class="list-unstyled">
@@ -355,12 +355,9 @@
                 <li id="number__item">
                   <p class="mb-0 text-center">1</p>
                 </li>
-                <li id="number__item">
-                  <p class="mb-0 text-center">1</p>
-                </li>
               </ul>
             </div>
-            <div class="col-5 col-sm-4 col-lg-3 p-0">
+            <div id="coin__container" class="col-5 col-sm-4 col-lg-3 p-0">
               <p id="coin__name" class="mb-0 text-center">Coin:</p>
               <!-- THIS IS FOR THE NAME OF COIN -->
               <ul class="list-unstyled">
@@ -368,14 +365,13 @@
                   <img id="result__logo" src="/src/img/btc.svg" alt="btc" />
                   <p class="col-10" id="result__name">Bitcoin</p>
                 </li>
-                <li id="name__item">
-                  <img id="result__logo" src="/src/img/btc.svg" alt="btc" />
-                  <p class="col-10" id="result__name">Bitcoin</p>
-                </li>
               </ul>
             </div>
             <!-- Header and Main result -->
-            <div class="col-6 col-sm-7 col-lg-8 overflow-auto p-0">
+            <div
+              id="coin__container"
+              class="col-6 col-sm-7 col-lg-8 overflow-auto p-0"
+            >
               <!-- Header  and Result -->
               <ul class="list-unstyled d-flex text-center">
                 <!-- Price List -->
@@ -384,9 +380,6 @@
                   <p id="coin__price__header">Price</p>
                   <ul id="price__list">
                     <!-- Price Item-->
-                    <li class="col-5" id="price__item">
-                      <p id="price__content">$999,000,000,000</p>
-                    </li>
                     <li class="col-5" id="price__item">
                       <p id="price__content">$999,000,000,000</p>
                     </li>
@@ -401,9 +394,6 @@
                     <li class="col-5" id="volume__item">
                       <p id="volume__content">$999,000,000,000</p>
                     </li>
-                    <li class="col-5" id="volume__item">
-                      <p id="volume__content">$999,000,000,000</p>
-                    </li>
                   </ul>
                 </li>
                 <!-- market Cap list -->
@@ -411,9 +401,6 @@
                   <p id="coin__marketcap__header">Mkt Cap</p>
                   <ul id="marketcap__list">
                     <!-- Marketcap Item -->
-                    <li class="col-5" id="marketcap__item">
-                      <p id="marketcap__content">$999,000,000,000</p>
-                    </li>
                     <li class="col-5" id="marketcap__item">
                       <p id="marketcap__content">$999,000,000,000</p>
                     </li>
@@ -428,16 +415,7 @@
                       <button
                         id="moreinfo__button"
                         data-toggle="collapse"
-                        data-target="#collapseExample"
-                      >
-                        View more
-                      </button>
-                    </li>
-                    <li class="col-5" id="moreinfo__item">
-                      <button
-                        id="moreinfo__button"
-                        data-toggle="collapse"
-                        data-target="#collapseExample1"
+                        data-target="#collapseContainer"
                       >
                         View more
                       </button>
@@ -447,11 +425,11 @@
               </ul>
             </div>
             <!-- Collapsable List -->
-            <div class="container p-0">
+            <div class="container p-0" style="transition: all 0.5s ease">
               <ul class="list-unstyled">
                 <!-- Collapsable Body -->
                 <li>
-                  <div class="collapse show container" id="collapseExample">
+                  <div class="collapse container" id="collapseContainer">
                     <div class="row">
                       <!-- Header and Button -->
                       <div
@@ -741,8 +719,14 @@
           <div
             class="col text-end d-flex align-items-end justify-content-end flex-wrap p-0 px-sm-1"
           >
+            <a href="https://www.instagram.com/mjpedong/" target="_blank">
+              <i id="bi__footer" class="bi-instagram"></i
+            ></a>
             <a href="https://www.linkedin.com/in/markpedong/" target="_blank">
-              <i id="bi__footer" class="bi-linkedin"> </i>
+              <i id="bi__footer" class="bi-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/markpedong_" target="_blank">
+              <i id="bi__footer" class="bi-twitter"></i>
             </a>
             <a href="https://github.com/markpedong" target="_blank">
               <i id="bi__footer" class="bi-github"></i>
