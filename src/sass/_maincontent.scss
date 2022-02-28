@@ -32,6 +32,7 @@
   font-family: $poppinsFont, sans-serif;
   font-weight: var(--font-weight-7);
   font-size: var(--font-size-fluid-0);
+  border: 1px solid black;
 }
 
 #search__btn {
@@ -80,6 +81,7 @@
 
 #crypto__acronym {
   color: var(--gray-5);
+  text-transform: uppercase;
 }
 
 #cryptotext__container {
@@ -92,17 +94,13 @@
 #top__crypto__description {
   color: var(--gray-7);
 }
-
-.fa-btc {
-  background-color: $bitcoincolor;
-}
-
-.fa-ethereum {
-  background: var(--indigo-7);
-}
-
-.fa-dollar-sign {
-  background: var(--teal-5);
+#top__brand {
+  margin: var(--size-3) 0;
+  height: var(--size-fluid-6);
+  width: var(--size-fluid-6);
+  border: 2px solid var(--gray-0);
+  border-radius: var(--radius-round);
+  background: var(--gray-0);
 }
 
 #card__header {
@@ -114,6 +112,7 @@
 
 #network__logo {
   height: var(--size-fluid-3);
+  width: var(--size-fluid-3);
   margin-right: var(--size-2);
   border: 1px solid var(--gray-4);
 }

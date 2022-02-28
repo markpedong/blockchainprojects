@@ -21,6 +21,9 @@
   font-size: var(--font-size-fluid-1);
 }
 
+#project__link {
+  text-decoration: none;
+}
 #footer__links {
   cursor: pointer;
 }
@@ -33,6 +36,7 @@
   margin: 0;
   padding: var(--size-2) var(--size-2) var(--size-2) var(--size-1);
   border-radius: var(--radius-2);
+  text-decoration: none;
 }
 
 .footer__span {

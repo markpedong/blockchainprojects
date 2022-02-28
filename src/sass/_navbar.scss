@@ -83,6 +83,11 @@
   color: var(--gray-9);
 }
 
+.nav-active {
+  background-color: white;
+  color: black !important;
+}
+
 @media only screen and (max-width: 991px) {
   #nav__outer__container {
     padding: 0;
