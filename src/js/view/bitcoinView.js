@@ -1,4 +1,4 @@
-class PriceView {
+class BitcoinView {
   #parentElement = document.querySelector(".top__bitcoin");
   #data;
 
@@ -35,4 +35,4 @@ class PriceView {
   }
 }
 
-export default new PriceView();
+export default new BitcoinView();

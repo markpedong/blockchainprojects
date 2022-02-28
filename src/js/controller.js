@@ -1,9 +1,12 @@
-import * as animation from "./animation.js";
-import * as navbar from "./navbar.js";
-import * as collapse from "./collapse.js";
+import * as animation from "./view/animation.js";
+import * as navbar from "./view/navbar.js";
+import * as collapse from "./view/collapseView.js";
 import * as model from "../js/model.js";
-import priceView from "./view/priceView.js";
+
 import * as URL from "./config.js";
+import bitcoinView from "./view/bitcoinView.js";
+import etherView from "./view/etherView.js";
+import tetherView from "./view/tetherView.js";
 
 export default class BlockChain {
   constructor() {
@@ -24,17 +27,19 @@ export default class BlockChain {
   }
 }
 
-const controlPrice = async function (url) {
+const bitcoinPrice = async function (url, className) {
   try {
     // loading the price
     await model.loadPrice(url);
 
     // rendering the price
-    priceView.render(model.state.coin);
+    className.render(model.state.coin);
   } catch (err) {
     // alert(err);
     console.error(err);
   }
 };
 
-controlPrice(URL.API_URL_BTC);
+bitcoinPrice(URL.API_URL_BTC, bitcoinView);
+bitcoinPrice(URL.API_URL_ETH, etherView);
+bitcoinPrice(URL.API_URL_USD, tetherView);
