@@ -10,7 +10,6 @@ const networkContainer = document.querySelector("#networkContainer");
     const network = e.target;
 
     selectNetwork.innerHTML = network.innerHTML;
-
-    selectedNetwork = network.innerHTML;
+    console.log(network);
   })
 );
