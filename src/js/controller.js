@@ -8,26 +8,7 @@ import bitcoinView from "./view/bitcoinView.js";
 import etherView from "./view/etherView.js";
 import tetherView from "./view/tetherView.js";
 
-export default class BlockChain {
-  constructor() {
-    this._networkSelector();
-  }
-
-  _networkSelector() {
-    const networks = document.querySelectorAll("#card__header");
-    const selectNetwork = document.querySelector("#select__network");
-
-    networks.forEach((el) =>
-      el.addEventListener("click", function (e) {
-        const network = e.target;
-
-        selectNetwork.innerHTML = network.innerHTML;
-      })
-    );
-  }
-}
-
-const bitcoinPrice = async function (url, className) {
+const topCoinsPrice = async function (url, className) {
   try {
     // loading the price
     await model.loadPrice(url);
@@ -40,6 +21,10 @@ const bitcoinPrice = async function (url, className) {
   }
 };
 
-bitcoinPrice(URL.API_URL_BTC, bitcoinView);
-bitcoinPrice(URL.API_URL_ETH, etherView);
-bitcoinPrice(URL.API_URL_USD, tetherView);
+const init = function () {
+  topCoinsPrice(URL.API_URL_ETH, etherView);
+  topCoinsPrice(URL.API_URL_BTC, bitcoinView);
+  topCoinsPrice(URL.API_URL_USD, tetherView);
+};
+
+init();

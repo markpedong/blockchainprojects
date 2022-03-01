@@ -14,15 +14,10 @@ class BitcoinView {
   }
 
   #generateMarkup() {
-    console.log(this.#data);
-
+    //prettier-ignore
     return `
-        <img id="top__brand" src="/src/img/${this.#data.acronym}.svg" alt="${
-      this.#data.acronym
-    }" />
-        <p id="crypto__price">${numeral(this.#data.price).format(
-          "$ 0,0[.]00"
-        )}</p>
+        <img id="top__brand" src="/src/img/${this.#data.acronym}.svg" alt="${this.#data.acronym}" />
+        <p id="crypto__price">${numeral(this.#data.price).format("$ 0,0[.]00")}</p>
         <div class="top__bitcoin" id="cryptotext__container">
         <p id="crypto__header">${this.#data.name}</p>
         <p id="crypto__acronym">${this.#data.acronym}</p>
