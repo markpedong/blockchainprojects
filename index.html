@@ -51,11 +51,15 @@
     <!-- Numeral -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/src/css/main.min.css" />
 
     <!-- Extenal Javascript -->
     <script type="module" defer src="./src/js/controller.js"></script>
+    <script type="module" defer src="./src/js/view/bitcoinView.js"></script>
   </head>
   <body>
     <!-- Loader -->
@@ -234,7 +238,7 @@
     <!-- MAIN CONTENT SECTION -->
     <section id="content__section" class="pb-5">
       <!-- Container for the Networks available -->
-      <div class="container-lg pb-5">
+      <div class="container-lg pb-5" id="networkContainer">
         <!-- Selection of Tabs -->
         <div class="row">
           <div class="col"></div>
@@ -259,15 +263,15 @@
                   >
                     <div id="card__header"><img id="network__logo" src="/src/img/avax.svg" alt="avax">Avalanche</div>
                     <div id="card__header"><img class="bg-dark" id="network__logo" src="./src/img/bnb.svg" alt="bnb">BSC</div>
-                    <div id="card__header"><img class="bg-white" id="network__logo" src="/src/img/sol.svg" alt="sol">solana</div>
+                    <div id="card__header"><img class="bg-white" id="network__logo" src="/src/img/sol.svg" alt="sol">Solana</div>
                     <div id="card__header"><img class="bg-light" id="network__logo" src="./src/img/eth.svg" alt="eth">Ethereum</div>
                     <div id="card__header"><img id="network__logo" src="/src/img/ftm.svg" alt="ftm">Fantom</div>
-                    <div id="card__header"><img id="network__logo" src="/src/img/gno.png" alt="gno">Gnosis Chain</div>
-                    <div id="card__header"><img class="bg-white" id="network__logo" src="./src/img/one.svg" alt="one">Harmony One</div>
+                    <div id="card__header"><img class="bg-white" id="network__logo" src="./src/img/one.svg" alt="one">Harmony</div>
                     <div id="card__header"><img class="bg-white" id="network__logo" src="./src/img/matic.svg" alt="matic">Polygon</div>
                   </div>
                 </button>
               </div>
+
               <div
                 class="col-12 col-lg-3 order-5 order-lg-3 mb-3 text-center align-self-start"
               >
@@ -280,6 +284,22 @@
       </div>
 
       <!-- Results Container -->
+      <!-- <div class="container-lg" id="result__container">
+        <div
+          class="d-flex justify-content-center align-items-center py-5"
+          id="header__container"
+        >
+          <img
+            class="me-3"
+            id="network__header__logo"
+            src="./src/img/avax.svg"
+            alt="avax"
+          />
+          <p class="text-center mb-0 text-uppercase" id="network__header">
+            avalanche
+          </p>
+        </div>
+      </div> -->
     </section>
 
     <!-- footer -->

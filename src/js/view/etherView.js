@@ -1,32 +1,27 @@
-class EtherView {
-  #parentElement = document.querySelector(".top__ethereum");
-  #data;
+import View from "./View.js";
 
-  render(data) {
-    this.#data = data;
-    const markup = this.#generateMarkup();
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML("afterbegin", markup);
+//prettier-ignore
+class EtherView extends View {
+ 
+  // Rendering the Bitcoin Top 3
+  _parentElement = document.querySelector('.top__ethereum')
+  _description = 'Blockchain technology to create and run decentralized digital applications.'
+
+  ethereumHandlerRender(handler) {
+    window.addEventListener("load", handler);
   }
 
-  #clear() {
-    this.#parentElement.innerHTML = "";
-  }
-
-  #generateMarkup() {
-    //prettier-ignore
+  _generateMarkup() {
     return `
-          <img id="top__brand" src="/src/img/${this.#data.acronym}.svg" alt="${this.#data.acronym}" />
-          <p id="crypto__price">${numeral(this.#data.price).format("$ 0,0[.]00")}</p>
-          <div class="top__bitcoin" id="cryptotext__container">
-          <p id="crypto__header">${this.#data.name}</p>
-          <p id="crypto__acronym">${this.#data.acronym}</p>
-          </div>
-          <p id="top__crypto__description">
-          Blockchain technology to create and run decentralized digital
-          applications.
-          </p>
-      `;
+      <img id="top__brand" src="/src/img/${this._data.acronym}.svg" alt="${this._data.acronym}" />
+      <p id="crypto__price">${numeral(this._data.price).format("$ 0,0[.]00")}</p>
+      <div class="top__bitcoin" id="cryptotext__container">
+      <p id="crypto__header">${this._data.name}</p>
+      <p id="crypto__acronym">${this._data.acronym}</p>
+      </div>
+      <p id="top__crypto__description">${this._description}</p>
+    `
+    ;
   }
 }
 

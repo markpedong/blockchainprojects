@@ -1,18 +1,16 @@
-export default class BlockChain {
-  constructor() {
-    this._networkSelector();
-  }
+import { BLOCKCHAIN__URL } from "../config.js";
 
-  _networkSelector() {
-    const networks = document.querySelectorAll("#card__header");
-    const selectNetwork = document.querySelector("#select__network");
+const networks = document.querySelectorAll("#card__header");
+const selectNetwork = document.querySelector("#select__network");
+const networkContainer = document.querySelector("#networkContainer");
 
-    networks.forEach((el) =>
-      el.addEventListener("click", function (e) {
-        const network = e.target;
+// This is for changing the Network in the Button
+[...networks].map((el) =>
+  el.addEventListener("click", function (e) {
+    const network = e.target;
 
-        selectNetwork.innerHTML = network.innerHTML;
-      })
-    );
-  }
-}
+    selectNetwork.innerHTML = network.innerHTML;
+
+    selectedNetwork = network.innerHTML;
+  })
+);

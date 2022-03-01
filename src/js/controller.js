@@ -1,30 +1,31 @@
-import * as animation from "./view/animation.js";
-import * as navbar from "./view/navbar.js";
-import * as collapse from "./view/collapseView.js";
+// // import * as animation from "./view/animation.js";
+// // import * as navbar from "./view/navbar.js";
+// // import * as collapse from "./view/collapseView.js";
+// // import * as network from "./view/network.js";
 import * as model from "../js/model.js";
 
-import * as URL from "./config.js";
+// // import * as URL from "./config.js";
 import bitcoinView from "./view/bitcoinView.js";
 import etherView from "./view/etherView.js";
 import tetherView from "./view/tetherView.js";
 
-const topCoinsPrice = async function (url, className) {
+const topCoins = async function (coin, className) {
   try {
-    // loading the price
-    await model.loadPrice(url);
-
-    // rendering the price
+    await model.loadPrice(coin);
     className.render(model.state.coin);
   } catch (err) {
-    // alert(err);
     console.error(err);
   }
 };
 
-const init = function () {
-  topCoinsPrice(URL.API_URL_ETH, etherView);
-  topCoinsPrice(URL.API_URL_BTC, bitcoinView);
-  topCoinsPrice(URL.API_URL_USD, tetherView);
-};
+topCoins("bitcoin", bitcoinView);
+topCoins("ethereum", etherView);
+topCoins("tether", tetherView);
 
-init();
+// const init = function () {
+//   //   bitcoinView.bitcoinHandlerRender(bitcoinTop);
+//   etherView.ethereumHandlerRender(ethereumTop);
+//   tetherView.tetherHandlerRender(tetherTop);
+// };
+
+// init();
