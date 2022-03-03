@@ -1,0 +1,278 @@
+<div class="container-lg" id="result__container">
+  <!-- Header for the Network -->
+  <div
+    class="d-flex justify-content-center align-items-center py-5"
+    id="header__container"
+  >
+    <img
+      class="me-3"
+      id="network__header__logo"
+      src="./src/img/avax.svg"
+      alt="avax"
+    />
+    <p class="text-center mb-0 text-uppercase" id="network__header">
+      avalanche
+    </p>
+  </div>
+
+  <!-- Main Result Container -->
+  <div>
+    <div class="row d-flex p-0">
+      <!-- Header -->
+      <div id="coin__container" class="col-1 p-0">
+        <p id="coin__number" class="mb-0 text-center">#</p>
+        <!-- THIS IS FOR THE NUMBER -->
+        <ul class="list-unstyled">
+          <!-- Coin Number -->
+          <li id="number__item">
+            <p class="mb-0 text-center">1</p>
+          </li>
+        </ul>
+      </div>
+      <div id="coin__container" class="col-5 col-sm-4 col-lg-3 p-0">
+        <p id="coin__name" class="mb-0 text-center">Coin:</p>
+        <!-- THIS IS FOR THE NAME OF COIN -->
+        <ul class="list-unstyled">
+          <li id="name__item">
+            <img id="result__logo" src="/src/img/btc.svg" alt="btc" />
+            <p class="col-10" id="result__name">Bitcoin</p>
+          </li>
+        </ul>
+      </div>
+      <!-- Header and Main result -->
+      <div
+        id="coin__container"
+        class="col-6 col-sm-7 col-lg-8 overflow-auto p-0"
+      >
+        <!-- Header  and Result -->
+        <ul class="list-unstyled d-flex text-center">
+          <!-- Price List -->
+          <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+            <!-- Price Header -->
+            <p id="coin__price__header">Price</p>
+            <ul id="price__list">
+              <!-- Price Item-->
+              <li class="col-5" id="price__item">
+                <p id="price__content">$999,000,000,000</p>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Volume List -->
+          <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+            <p id="coin__volume__header">Volume</p>
+            <ul id="volume__list">
+              <!-- Volume item -->
+              <li class="col-5" id="volume__item">
+                <p id="volume__content">$999,000,000,000</p>
+              </li>
+            </ul>
+          </li>
+          <!-- market Cap list -->
+          <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+            <p id="coin__marketcap__header">Mkt Cap</p>
+            <ul id="marketcap__list">
+              <!-- Marketcap Item -->
+              <li class="col-5" id="marketcap__item">
+                <p id="marketcap__content">$999,000,000,000</p>
+              </li>
+            </ul>
+          </li>
+          <!-- More information list -->
+          <li class="col-12 col-sm-6 col-md-5 col-lg-3">
+            <p id="coin__moreinformation__header">More Info.</p>
+            <ul id="moreinfo__list">
+              <!-- More info item -->
+              <li class="col-5" id="moreinfo__item">
+                <button
+                  id="moreinfo__button"
+                  data-toggle="collapse"
+                  data-target="#collapseContainer"
+                >
+                  View more
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Collapsable List -->
+      <div class="container p-0" style="transition: all 0.5s ease">
+        <ul class="list-unstyled">
+          <!-- Collapsable Body -->
+          <li>
+            <div class="collapse container" id="collapseContainer">
+              <div class="row">
+                <!-- Header and Button -->
+                <div
+                  class="col-1 p-0 d-flex justify-content-start align-items-center"
+                >
+                  <button id="collapse__button">
+                    <i
+                      class="bi bi-arrow-left-circle-fill"
+                      id="btn__collapse"
+                    ></i>
+                  </button>
+                </div>
+                <div
+                  class="col-12 p-0 d-flex justify-content-center align-items-center"
+                >
+                  <img id="collapse__logo" src="./src/img/btc.svg" alt="btc" />
+                  <p class="text-center" id="collapse__header">Bitcoin</p>
+                </div>
+                <!-- Coin Information -->
+                <div class="col-12 py-3 px-0">
+                  <p id="coin__informationheader">What Is Bitcoin (BTC)?</p>
+                  <p id="coin__information">
+                    Bitcoin is a decentralized cryptocurrency originally
+                    described in a 2008 whitepaper by a person, or group of
+                    people, using the alias Satoshi Nakamoto. It was launched
+                    soon after, in January 2009.
+                  </p>
+                  <p id="coin__information">
+                    Bitcoin is a peer-to-peer online currency, meaning that all
+                    transactions happen directly between equal, independent
+                    network participants, without the need for any intermediary
+                    to permit or facilitate them. Bitcoin was created, according
+                    to Nakamoto’s own words, to allow “online payments to be
+                    sent directly from one party to another without going
+                    through a financial institution.”
+                  </p>
+                  <p id="coin__information">
+                    Some concepts for a similar type of a decentralized
+                    electronic currency precede BTC, but Bitcoin holds the
+                    distinction of being the first-ever cryptocurrency to come
+                    into actual use.
+                  </p>
+                </div>
+
+                <!-- Bitcoin Market Header -->
+                <div class="col-12 p-0">
+                  <p id="coin__informationheader">Bitcoin Markets</p>
+                </div>
+
+                <!-- Coin Market -->
+                <div class="table-responsive-lg overflow-auto p-0">
+                  <table class="table table-borderless" id="table__container">
+                    <thead>
+                      <tr>
+                        <th id="table__header">#</th>
+                        <th id="table__header">Source</th>
+                        <th id="table__header">Pairs</th>
+                        <th id="table__header">Price</th>
+                        <th id="table__header">Volume</th>
+                        <th id="table__header">Available Networks:</th>
+                        <th id="table__header">Withdrawal Fee:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="table__outer">
+                        <!-- Number -->
+                        <th id="table__content__container">1</th>
+                        <!-- Source -->
+                        <td id="table__content__container" class="table__list">
+                          <img
+                            id="table__logo"
+                            src="/src/img/bnb.svg"
+                            alt="bnb"
+                          />
+                          <p id="table__list_name" class="col-10">Binance</p>
+                        </td>
+                        <!-- Pair -->
+                        <td id="table__content__container">BTC/ USDT</td>
+                        <!-- Price -->
+                        <td id="table__content__container">$999,999,999,999</td>
+                        <!-- Volume -->
+                        <td id="table__content__container">$999,999,999,999</td>
+                        <!-- Available Network -->
+                        <td id="table__content__container">
+                          <ul class="list-unstyled" id="table__list__container">
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/btc.svg"
+                                alt="btc"
+                              />
+                              <p id="table__list_name" class="col-10">
+                                Bitcoin
+                              </p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/eth.svg"
+                                alt="eth"
+                              />
+                              <p id="table__list_name" class="col-10">
+                                Ethereum
+                              </p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/ftm.svg"
+                                alt="ftm"
+                              />
+                              <p id="table__list_name" class="col-10">Fantom</p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/avax.svg"
+                                alt="avax"
+                              />
+                              <p id="table__list_name" class="col-10">
+                                Avalanche
+                              </p>
+                            </li>
+                          </ul>
+                        </td>
+                        <!-- Withdrawal fee -->
+                        <td id="table__content__container">
+                          <ul class="list-unstyled" id="table__list__container">
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/btc.svg"
+                                alt="btc"
+                              />
+                              <p id="table__list_name" class="col-10">0.01</p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/eth.svg"
+                                alt="eth"
+                              />
+                              <p id="table__list_name" class="col-10">0.02</p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/ftm.svg"
+                                alt="ftm"
+                              />
+                              <p id="table__list_name" class="col-10">0.05</p>
+                            </li>
+                            <li class="table__list">
+                              <img
+                                id="table__logo"
+                                src="/src/img/avax.svg"
+                                alt="avax"
+                              />
+                              <p id="table__list_name" class="col-10">0.005</p>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

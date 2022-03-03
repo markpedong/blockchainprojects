@@ -15,12 +15,15 @@ const topCoins = async function (coin, className) {
   }
 };
 
-const networkselect = async function () {
+const networkRender = async function () {
   try {
-    // selecting a network
-    networkView.getNetwork();
     // rendering the network in the selection
+    networkView.getNetwork();
+
     // submitting the network
+    networkView.networkSearch();
+
+    // rendering the result
   } catch (err) {
     console.error(err);
   }
@@ -29,7 +32,7 @@ const networkselect = async function () {
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
-  networkView.addHandlerNetwork(networkselect())
+  networkView.addHandlerNetwork(networkRender())
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))
   topCoinsView.tether.topCoinsHandlerRender(topCoins(config.TETHER, topCoinsView.tether))
