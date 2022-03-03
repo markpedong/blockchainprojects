@@ -4,12 +4,16 @@ export default class View {
       this._data = data;
       this._generateMarkup()
   }
-  render2(data) {
+  renderTotalMarketCap(data) {
     this._data = data;
-    this._generateMarkup2();
+    this._markupTotalMarketCap();
   }
-  render3(data) {
+  renderTotalActive(data) {
     this._data = data;
-    this._generateMarkup3();
+    this._renderTotalActive();
+  }
+  renderTotalMarket(data) {
+    this._data = data;
+    this._renderTotalMarket();
   }
 }

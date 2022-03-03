@@ -12,7 +12,7 @@ class TotalCryptoMarket extends View {
     window.addEventListener("load", handler);
   }
 
-  _generateMarkup() {
+  _markupTotalMarketCap() {
     //   prettier-ignore
     const markup = `
         <i class="bi bi-${this._logo}"></i>
@@ -38,7 +38,7 @@ class TotalActiveCrypto extends TotalCryptoMarket {
     super(container, description, logo, format);
   }
 
-  _generateMarkup2() {
+  _renderTotalActive() {
     //   prettier-ignore
     const markup = `
           <i class="bi bi-${this._logo}"></i>
@@ -64,7 +64,7 @@ class TotalActiveMarket extends TotalCryptoMarket {
     super(container, description, logo, format);
   }
 
-  _generateMarkup3() {
+  _renderTotalMarket() {
     //   prettier-ignore
     const markup = `
         <i class="bi bi-${this._logo}"></i>

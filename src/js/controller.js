@@ -10,9 +10,9 @@ import networkView from "./view/networkView.js";
 const totalMarket = async function (className1, className2, className3) {
   try {
     await model.loadTotalMarket(config.TOTALCRYPTO_URL);
-    className1.render(model.state.totalCrypto);
-    className2.render2(model.state.totalCrypto);
-    className3.render3(model.state.totalCrypto);
+    className1.renderTotalMarketCap(model.state.totalCrypto);
+    className2.renderTotalActive(model.state.totalCrypto);
+    className3.renderTotalMarket(model.state.totalCrypto);
   } catch (err) {
     console.error(err);
   }
