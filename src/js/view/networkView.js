@@ -1,12 +1,19 @@
-const networks = document.querySelectorAll("#card__header");
-const selectNetwork = document.querySelector("#select__network");
+import View from "./View.js";
 
-// This is for changing the Network in the Button
-[...networks].map((el) =>
-  el.addEventListener("click", function (e) {
-    const network = e.target;
+class NetworkView extends View {
+  _parentEl = document.querySelector("#blockchainNetworks");
+  _networksArr = document.querySelectorAll("#card__header");
+  _selectNetwork = document.querySelector("#select__network");
 
-    selectNetwork.innerHTML = network.innerHTML;
-    console.log(network);
-  })
-);
+  getNetwork() {
+    this._parentEl.addEventListener("click", (e) => {
+      this._selectNetwork.innerHTML = e.target.innerHTML;
+    });
+  }
+
+  addHandlerNetwork(handler) {
+    this._parentEl.addEventListener("click", handler);
+  }
+}
+
+export default new NetworkView();
