@@ -7,9 +7,6 @@ class TopCoinsView extends View {
         this._container = container
         this._description = description
     }
- 
-  // Rendering the Bitcoin Top 3
-  // _parentElement = document.querySelector(this.container)
 
   topCoinsHandlerRender(handler) {
     window.addEventListener("load", handler);

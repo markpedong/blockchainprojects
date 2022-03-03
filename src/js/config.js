@@ -6,6 +6,8 @@ export const TOP_COINS_URL_LOCAL = '?localization=false&tickers=false&market_dat
 // prettier-ignore
 export const BLOCKCHAIN__URL = "https://api.coingecko.com/api/v3/asset_platforms";
 
+export const TOTALCRYPTO_URL = "https://api.coingecko.com/api/v3/global";
+
 // tokens
 export const BITCOIN = "bitcoin";
 export const ETHEREUM = "ethereum";
