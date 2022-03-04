@@ -41,21 +41,24 @@ const networkRender = async function () {
   }
 };
 
-totalMarket(
-  totalData.totalCryptoMarketCap,
-  totalData.totalCryptoActive,
-  totalData.totalActiveMarkets
-);
+// const resultsCoin = async function () {
+//   try {
+//     await model.loadResults(config.RESULT_URL, config.API_AUTH, config.API_KEY);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
 // totalMarket(totalData.totalCryptoActive);
 
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
   networkView.addHandlerNetwork(networkRender())
-  // totalData.totalCrypto.totalCryptoHandlerRender()
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))
   topCoinsView.tether.topCoinsHandlerRender(topCoins(config.TETHER, topCoinsView.tether))
+  totalMarket(totalData.totalCryptoMarketCap, totalData.totalCryptoActive, totalData.totalActiveMarkets);
 };
 
 init();

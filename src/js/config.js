@@ -12,3 +12,14 @@ export const TOTALCRYPTO_URL = "https://api.coingecko.com/api/v3/global";
 export const BITCOIN = "bitcoin";
 export const ETHEREUM = "ethereum";
 export const TETHER = "tether";
+
+//url for result
+// prettier-ignore
+export const RESULT_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=avalanche-ecosystem&order=market_cap_asc&per_page=50&page=1&sparkline=false'
+
+// avalanche-ecosystem
+// binance-smart-chain
+// fantom-ecosystem
+// harmony-ecosystem
+// polygon-ecosystem
+// solana-ecosystem

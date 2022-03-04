@@ -6,7 +6,7 @@ class NetworkView {
   getNetwork() {
     this._networkContainer.addEventListener("click", (e) => {
       //prettier-ignore
-      const selected = this._selectNetwork.innerHTML = e.target.innerHTML;
+      this._selectNetwork.innerHTML = e.target.innerHTML;
     });
   }
 
@@ -14,7 +14,9 @@ class NetworkView {
     this._parentEl.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const query = this._selectNetwork.textContent;
+      const query = this._selectNetwork.ariaValueNow;
+
+      console.log(query);
     });
   }
   addHandlerNetwork(handler) {

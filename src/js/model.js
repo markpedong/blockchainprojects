@@ -1,8 +1,9 @@
-import { TOP_COINS_URL, TOP_COINS_URL_LOCAL } from "./config.js";
+import * as config from "./config.js";
 
 export const state = {
   coin: {},
   totalCrypto: {},
+  results: [],
 };
 
 //////////////////////////////////////////////////////////////////
@@ -10,7 +11,9 @@ export const state = {
 export const loadPrice = async function (url) {
   try {
     // fetching the price
-    const res = await fetch(`${TOP_COINS_URL}${url}${TOP_COINS_URL_LOCAL}`);
+    const res = await fetch(
+      `${config.TOP_COINS_URL}${url}${config.TOP_COINS_URL_LOCAL}`
+    );
 
     if (!res.ok) throw new Error(`${data} (${res.status})`);
 
@@ -26,7 +29,7 @@ export const loadPrice = async function (url) {
   }
 };
 
-export const loadTotalMarket = async function (url) {
+export const loadTotalMarket = async function (url, key) {
   try {
     const res = await fetch(`${url}`);
 
@@ -41,3 +44,22 @@ export const loadTotalMarket = async function (url) {
     console.error(err);
   }
 };
+
+export const loadResults = async function () {
+  try {
+    const res = await fetch(`${config.RESULT_URL}`);
+    const data = await res.json();
+    console.log(data);
+
+    const [] = data.map((i) =>
+      state.results.push({
+        name: i.name,
+      })
+    );
+    console.log(state.results);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+loadResults();

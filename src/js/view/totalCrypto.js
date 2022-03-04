@@ -30,7 +30,7 @@ export const totalCryptoMarketCap = new TotalCryptoMarket(
   ".total__crypto",
   "Digital Currency Market Cap.",
   "currency-bitcoin",
-  "$ (0.00 a)"
+  `$ (0.00 a)`
 );
 
 class TotalActiveCrypto extends TotalCryptoMarket {
