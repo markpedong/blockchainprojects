@@ -54,6 +54,10 @@ export const loadResults = async function () {
     const [] = data.map((i) =>
       state.results.push({
         name: i.name,
+        id: i.id,
+        price: i.current_price,
+        image: i.image,
+        symbol: i.symbol,
       })
     );
     console.log(state.results);
