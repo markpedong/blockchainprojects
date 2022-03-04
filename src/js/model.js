@@ -47,9 +47,10 @@ export const loadTotalMarket = async function (url, key) {
 
 export const loadResults = async function () {
   try {
-    const res = await fetch(`${config.RESULT_URL}`);
+    const res = await fetch(
+      `${config.RESULT_URL}avalanche-ecosystem${config.RESULT_MARKET}`
+    );
     const data = await res.json();
-    console.log(data);
 
     const [] = data.map((i) =>
       state.results.push({
@@ -60,10 +61,10 @@ export const loadResults = async function () {
         symbol: i.symbol,
       })
     );
-    console.log(state.results);
   } catch (err) {
     console.error(err);
   }
 };
 
 loadResults();
+console.log(state.results);
