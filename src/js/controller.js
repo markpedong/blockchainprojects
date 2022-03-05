@@ -35,19 +35,31 @@ const resultsRender = async function () {
     // submitting the network // getting the selected network
     const query = networkView.networkSearch();
 
-    // getting the result
-    model.loadResults(query);
+    // getting the value
+    const value = query.firstChild.dataset.value;
 
-    // rendering the result
-    networkView.renderResultContainer();
+    if (!value) return;
+
+    console.log(value);
+    // getting the result
+    model.loadResults(value);
+
+    console.log(model.state.results);
+
+    // // rendering the result
+    // // prettier-ignore
+    // if (query = "select a network:") {
+    //   return;
+    // }
+    // networkView.generateResultsContainerMarkup(query);
   } catch (err) {
     console.error(err);
   }
 };
-
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
+  resultsRender();
   networkView.addHandlerNetwork(resultsRender)
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))

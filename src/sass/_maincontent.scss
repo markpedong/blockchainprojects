@@ -33,12 +33,20 @@
   font-weight: var(--font-weight-7);
   font-size: var(--font-size-fluid-0);
   border: 1px solid black;
+  text-transform: capitalize;
+}
+// .btn_padding {
+//   padding: var(--size-4) var(--size-fluid-2);
+// }
+
+#select__text {
+  padding: var(--size-3) var(--size-1);
 }
 
 #search__btn {
   background-color: var(--indigo-6);
-  border-radius: var(--radius-4);
-  padding: var(--size-2) var(--size-fluid-3);
+  border-radius: var(--radius-3);
+  padding: var(--size-4) var(--size-fluid-3);
   border: none !important;
 }
 
@@ -64,15 +72,8 @@
   font-weight: var(--font-weight-7);
 }
 
-#fa-brands,
 #network__logo {
   border-radius: var(--radius-round);
-}
-
-#fa-brands {
-  font-size: var(--font-size-fluid-2);
-  padding: var(--size-3) var(--size-5);
-  margin: var(--size-8) 0 var(--size-3);
 }
 
 #crypto__header {
@@ -111,7 +112,6 @@
 #card__header {
   font-family: $poppinsFont, sans-serif;
   border-radius: var(--radius-2);
-  margin-top: var(--size-2);
   padding: var(--size-2) var(--size-1);
   text-transform: capitalize;
 }
