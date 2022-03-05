@@ -6,6 +6,7 @@ import * as model from "../js/model.js";
 import * as totalData from "./view/totalCrypto.js";
 import * as topCoinsView from "./view/topCoinsView.js";
 import networkView from "./view/networkView.js";
+import mainResultView from "./view/mainResultView.js";
 
 const totalMarket = async function (className1, className2, className3) {
   try {
@@ -41,9 +42,9 @@ const resultsRender = async function () {
     if (!value) return;
 
     // getting the result for extra details
-    const result = await model.categoryDetails();
+    const networkDetails = await model.categoryDetails();
 
-    result.map((i) => {
+    networkDetails.map((i) => {
       //prettier-ignore
       i.id == value ? model.state.resultDetails = {
             id: i.id,
@@ -54,12 +55,17 @@ const resultsRender = async function () {
     } : '';
     });
 
-    // getting the result
+    // getting the extra details for the collpse container
     const extraDetails = model.state.resultDetails;
 
     networkView.renderResultContainer(extraDetails);
+
     // rendering the result
-    // prettier-ignore
+    await model.loadResults(value);
+
+    const result = model.state.results;
+
+    mainResultView.renderMainResult(result);
   } catch (err) {
     console.error(err);
   }

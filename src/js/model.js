@@ -73,6 +73,7 @@ export const loadResults = async function (eco) {
       `${config.RESULT_URL}${eco}${config.RESULT_MARKET}`
     );
     const data = await res.json();
+
     const [] = data.map((i) =>
       state.results.push({
         name: i.name,
@@ -84,7 +85,6 @@ export const loadResults = async function (eco) {
         symbol: i.symbol,
       })
     );
-    console.log(state.results);
   } catch (err) {
     console.error(err);
   }

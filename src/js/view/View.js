@@ -25,4 +25,9 @@ export default class View {
     this._data = data;
     this._generateResultsContainerMarkup();
   }
+
+  renderMainResult(data) {
+    this._data = data;
+    this._mainResultRender();
+  }
 }
