@@ -16,6 +16,6 @@ export const TETHER = "tether";
 //url for result
 // prettier-ignore
 export const RESULT_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category='
-export const RESULT_NET = "avalanche-ecosystem";
+
 // prettier-ignore
-export const RESULT_MARKET = '&order=market_cap_asc&per_page=50&page=1&sparkline=false'
+export const RESULT_MARKET = '&order=id_asc&per_page=100&page=1&sparkline=false'

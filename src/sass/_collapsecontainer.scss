@@ -15,6 +15,25 @@
   background-color: white;
   border-radius: var(--radius-round);
 }
+
+#volume__24h,
+#market__cap,
+#extra__description {
+  font-size: var(--font-size-1);
+}
+
+#volume__24h {
+  font-family: $interFont;
+}
+
+#market__cap {
+  font-family: $rubikFont;
+}
+
+#extra__description {
+  font-family: $poppinsFont;
+}
+
 #collapse__header {
   font-family: $rubikFont;
   font-size: var(--font-size-fluid-2);

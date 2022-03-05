@@ -3,6 +3,7 @@ import * as config from "./config.js";
 export const state = {
   coin: {},
   totalCrypto: {},
+  resultDetails: [],
   results: [],
 };
 
@@ -29,7 +30,7 @@ export const loadPrice = async function (url) {
   }
 };
 
-export const loadTotalMarket = async function (url, key) {
+export const loadTotalMarket = async function (url) {
   try {
     const res = await fetch(`${url}`);
 
@@ -45,22 +46,46 @@ export const loadTotalMarket = async function (url, key) {
   }
 };
 
+export const categoryDetails = async function () {
+  try {
+    const res =
+      await fetch(`https://api.coingecko.com/api/v3/coins/categories?order=name_asc
+    `);
+    const data = await res.json();
+    console.log(data);
+    const [] = data.map((i) => {
+      state.resultDetails.push({
+        id: i.id,
+        name: i.name,
+        description: i.content,
+        marketcap: i.market_cap,
+        volume: i.volume_24h,
+      });
+    });
+  } catch (err) {
+    console.error(err);
+  }
+};
+categoryDetails();
+
 export const loadResults = async function (eco) {
   try {
     const res = await fetch(
       `${config.RESULT_URL}${eco}${config.RESULT_MARKET}`
     );
     const data = await res.json();
-
     const [] = data.map((i) =>
       state.results.push({
         name: i.name,
         id: i.id,
+        volume: i.total_volume,
+        marketcap: i.market_cap,
         price: i.current_price,
         image: i.image,
         symbol: i.symbol,
       })
     );
+    console.log(state.results);
   } catch (err) {
     console.error(err);
   }

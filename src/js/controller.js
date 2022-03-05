@@ -62,4 +62,4 @@ const init = function () {
   totalMarket(totalData.totalCryptoMarketCap, totalData.totalCryptoActive, totalData.totalActiveMarkets);
 };
 
-init();
+// init();
