@@ -33,25 +33,20 @@ const resultsRender = async function () {
     networkView.getNetwork();
 
     // submitting the network // getting the selected network
-    const query = networkView.networkSearch();
+    let query = networkView.networkSearch();
 
     // getting the value
     const value = query.firstChild.dataset.value;
 
     if (!value) return;
 
-    console.log(value);
     // getting the result
     model.loadResults(value);
 
-    console.log(model.state.results);
+    // rendering the result
+    // prettier-ignore
 
-    // // rendering the result
-    // // prettier-ignore
-    // if (query = "select a network:") {
-    //   return;
-    // }
-    // networkView.generateResultsContainerMarkup(query);
+    networkView.generateResultsContainerMarkup();
   } catch (err) {
     console.error(err);
   }

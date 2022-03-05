@@ -8,10 +8,12 @@
   font-size: var(--font-size-fluid-2);
 }
 
-#collapse__logo {
+#network__header__logo {
   height: var(--size-fluid-4);
   width: var(--size-fluid-4);
   margin-right: var(--size-fluid-1);
+  background-color: white;
+  border-radius: var(--radius-round);
 }
 #collapse__header {
   font-family: $rubikFont;
