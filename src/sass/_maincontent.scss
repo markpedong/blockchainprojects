@@ -104,6 +104,10 @@
   background: var(--gray-0);
 }
 
+#select__network {
+  text-transform: capitalize;
+}
+
 #card__header {
   font-family: $poppinsFont, sans-serif;
   border-radius: var(--radius-2);

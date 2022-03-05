@@ -1,26 +1,51 @@
 class NetworkView {
   _parentEl = document.querySelector("#network__container");
   _networkContainer = document.querySelector("#blockchainNetworks");
-  _selectNetwork = document.querySelector("#select__network");
-
+  _networkSelected = document.querySelector("#select__network");
+  _btnNetwork = document.querySelector("#btn__network");
   getNetwork() {
     this._networkContainer.addEventListener("click", (e) => {
       //prettier-ignore
-      this._selectNetwork.innerHTML = e.target.innerHTML;
+      this._networkSelected.innerHTML = e.target.innerHTML;
     });
   }
 
   networkSearch() {
-    this._parentEl.addEventListener("submit", (e) => {
-      e.preventDefault();
+    const query = this._networkSelected.textContent;
 
-      const query = this._selectNetwork.ariaValueNow;
+    return query;
+  }
 
-      console.log(query);
-    });
+  // prettier-ignore
+  _generateResultsContainerMarkup() {
+    const markup =  `
+      <div class="container-lg" id="result__container">
+      <div
+        class="d-flex justify-content-center align-items-center py-5"
+        id="header__container"
+       >
+        <img
+          class="me-3"
+          id="network__header__logo"
+          src="./src/img/avax.svg"
+          alt="avax"
+        />
+        <p class="text-center mb-0 text-uppercase" id="network__header">
+          ${this._networkSelected.textContent}
+        </p>
+      </div>
+      </div> 
+    `
+    ;
+    document.querySelector('#content__section').insertAdjacentHTML('afterbegin', markup)
+
   }
   addHandlerNetwork(handler) {
-    this._parentEl.addEventListener("click", handler);
+    this._parentEl.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      handler();
+    });
   }
 }
 

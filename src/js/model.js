@@ -45,10 +45,10 @@ export const loadTotalMarket = async function (url, key) {
   }
 };
 
-export const loadResults = async function () {
+export const loadResults = async function (eco) {
   try {
     const res = await fetch(
-      `${config.RESULT_URL}avalanche-ecosystem${config.RESULT_MARKET}`
+      `${config.RESULT_URL}${eco}${config.RESULT_MARKET}`
     );
     const data = await res.json();
 
@@ -65,6 +65,3 @@ export const loadResults = async function () {
     console.error(err);
   }
 };
-
-loadResults();
-console.log(state.results);

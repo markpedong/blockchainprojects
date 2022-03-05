@@ -1,6 +1,6 @@
 // // import * as animation from "./view/animation.js";
 // // import * as navbar from "./view/navbar.js";
-// // import * as collapse from "./view/collapseView.js";
+import * as collapse from "./view/collapseView.js";
 import * as config from "./config.js";
 import * as model from "../js/model.js";
 import * as totalData from "./view/totalCrypto.js";
@@ -27,34 +27,28 @@ const topCoins = async function (coin, className) {
   }
 };
 
-const networkRender = async function () {
+const resultsRender = async function () {
   try {
     // rendering the network in the selection
     networkView.getNetwork();
 
-    // submitting the network
-    networkView.networkSearch();
+    // submitting the network // getting the selected network
+    const query = networkView.networkSearch();
+
+    // getting the result
+    model.loadResults(query);
 
     // rendering the result
+    networkView.renderResultContainer();
   } catch (err) {
     console.error(err);
   }
 };
 
-// const resultsCoin = async function () {
-//   try {
-//     await model.loadResults(config.RESULT_URL, config.API_AUTH, config.API_KEY);
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
-// totalMarket(totalData.totalCryptoActive);
-
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
-  networkView.addHandlerNetwork(networkRender())
+  networkView.addHandlerNetwork(resultsRender)
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))
   topCoinsView.tether.topCoinsHandlerRender(topCoins(config.TETHER, topCoinsView.tether))

@@ -16,4 +16,9 @@ export default class View {
     this._data = data;
     this._renderTotalMarket();
   }
+
+  renderResultContainer(data) {
+    this._data = data;
+    this._generateResultsContainerMarkup();
+  }
 }
