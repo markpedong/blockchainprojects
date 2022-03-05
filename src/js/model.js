@@ -46,21 +46,22 @@ export const loadTotalMarket = async function (url) {
   }
 };
 
-export const categoryDetails = async function (value) {
+export const categoryDetails = async function () {
   try {
     const res = await fetch(`${config.EXTRA_DETAILS_URL}`);
     const data = await res.json();
-    data.map((i) => {
-      i.id === value
-        ? (state.resultDetails = {
-            id: i.id,
-            name: i.name,
-            description: i.content,
-            marketcap: i.market_cap,
-            volume: i.volume_24h,
-          })
-        : "";
-    });
+    // prettier-ignore
+    // data.map(i => {
+    //   i.id == value ? state.resultDetails = {
+    //         id: i.id,
+    //         name: i.name,
+    //         description: i.content,
+    //         marketcap: i.market_cap,
+    //         volume: i.volume_24h,
+    // } : undefined;
+    // });
+
+    return data
   } catch (err) {
     console.error(err);
   }

@@ -41,12 +41,23 @@ const resultsRender = async function () {
     if (!value) return;
 
     // getting the result for extra details
-    model.categoryDetails(value);
+    const result = await model.categoryDetails();
+
+    result.map((i) => {
+      //prettier-ignore
+      i.id == value ? model.state.resultDetails = {
+            id: i.id,
+            name: i.name,
+            description: i.content,
+            marketcap: i.market_cap,
+            volume: i.volume_24h,
+    } : '';
+    });
 
     // getting the result
     const extraDetails = model.state.resultDetails;
-    console.log(extraDetails);
-    // networkView.renderResultContainer(i);
+
+    networkView.renderResultContainer(extraDetails);
     // rendering the result
     // prettier-ignore
   } catch (err) {

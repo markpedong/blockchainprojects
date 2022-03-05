@@ -46,17 +46,17 @@ class NetworkView extends View {
       <div class="row row-cols-2 text-center text-capitalize">
         <div class="col text-end" id="volume__24h">
           <p>volume 24h:</p>
-          <p>${this._data.volume}</p>
+          <p>${numeral(this._data.volume).format('$ (0.00 a)')}</p>
         </div>
         <div class="col text-start" id="market__cap">
           <p>market cap:</p>
-          <p>${this._data.marketcap}</p>
+          <p>${numeral(this._data.marketcap).format('$ (0.00 a)')}</p>
         </div>
       </div>
       <div class="row row-cols-1">
         <div class="col">
           <p id="extra__description">
-           ${this._data.description}
+           ${this._data.description == null ? '' : this._data.description}
           </p>
         </div>
       </div>
@@ -98,6 +98,7 @@ class NetworkView extends View {
     document.querySelector('#result__container').insertAdjacentHTML('afterbegin', markup)
 
   }
+
   addHandlerNetwork(handler) {
     this._parentEl.addEventListener("submit", function (e) {
       e.preventDefault();
