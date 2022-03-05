@@ -15,6 +15,8 @@ export const TETHER = "tether";
 
 //url for result
 // prettier-ignore
+export const EXTRA_DETAILS_URL = 'https://api.coingecko.com/api/v3/coins/categories?order=name_asc'
+// prettier-ignore
 export const RESULT_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category='
 
 // prettier-ignore

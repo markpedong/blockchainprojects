@@ -3,7 +3,7 @@ import * as config from "./config.js";
 export const state = {
   coin: {},
   totalCrypto: {},
-  resultDetails: [],
+  resultDetails: {},
   results: [],
 };
 
@@ -46,27 +46,25 @@ export const loadTotalMarket = async function (url) {
   }
 };
 
-export const categoryDetails = async function () {
+export const categoryDetails = async function (value) {
   try {
-    const res =
-      await fetch(`https://api.coingecko.com/api/v3/coins/categories?order=name_asc
-    `);
+    const res = await fetch(`${config.EXTRA_DETAILS_URL}`);
     const data = await res.json();
-    console.log(data);
-    const [] = data.map((i) => {
-      state.resultDetails.push({
-        id: i.id,
-        name: i.name,
-        description: i.content,
-        marketcap: i.market_cap,
-        volume: i.volume_24h,
-      });
+    data.map((i) => {
+      i.id === value
+        ? (state.resultDetails = {
+            id: i.id,
+            name: i.name,
+            description: i.content,
+            marketcap: i.market_cap,
+            volume: i.volume_24h,
+          })
+        : "";
     });
   } catch (err) {
     console.error(err);
   }
 };
-categoryDetails();
 
 export const loadResults = async function (eco) {
   try {

@@ -40,13 +40,15 @@ const resultsRender = async function () {
 
     if (!value) return;
 
-    // getting the result
-    model.loadResults(value);
+    // getting the result for extra details
+    model.categoryDetails(value);
 
+    // getting the result
+    const extraDetails = model.state.resultDetails;
+    console.log(extraDetails);
+    // networkView.renderResultContainer(i);
     // rendering the result
     // prettier-ignore
-
-    networkView.generateResultsContainerMarkup();
   } catch (err) {
     console.error(err);
   }
@@ -62,4 +64,4 @@ const init = function () {
   totalMarket(totalData.totalCryptoMarketCap, totalData.totalCryptoActive, totalData.totalActiveMarkets);
 };
 
-// init();
+init();

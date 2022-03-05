@@ -1,4 +1,6 @@
-class NetworkView {
+import View from "./View.js";
+
+class NetworkView extends View {
   _parentEl = document.querySelector("#network__container");
   _networkContainer = document.querySelector("#blockchainNetworks");
   _selectionContainer = document.querySelector("#selection__container");
@@ -32,11 +34,32 @@ class NetworkView {
   }
 
   // prettier-ignore
-  generateResultsContainerMarkup() {
+  _generateResultsContainerMarkup() {
     const markup =  `
     <div class="d-flex justify-content-center align-items-center py-5" id="header__container">
     <img class="me-3" id="network__header__logo" src="./src/img/${this._selectionContainer.firstChild.textContent}.svg" alt="${this._selectionContainer.firstChild.textContent}"/>
-    <p class="text-center mb-0 text-uppercase" id="network__header">${this._selectionContainer.firstChild.textContent}</p>
+    <p class="text-center mb-0 text-uppercase" id="network__header">${this._data.name}</p>
+    </div>
+
+    <!-- extra details -->
+    <div id="extra__details container-fluid">
+      <div class="row row-cols-2 text-center text-capitalize">
+        <div class="col text-end" id="volume__24h">
+          <p>volume 24h:</p>
+          <p>${this._data.volume}</p>
+        </div>
+        <div class="col text-start" id="market__cap">
+          <p>market cap:</p>
+          <p>${this._data.marketcap}</p>
+        </div>
+      </div>
+      <div class="row row-cols-1">
+        <div class="col">
+          <p id="extra__description">
+           ${this._data.description}
+          </p>
+        </div>
+      </div>
     </div>
 
     <div id="mainresult__container">
