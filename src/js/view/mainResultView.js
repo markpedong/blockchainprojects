@@ -18,7 +18,10 @@ class NameResult extends View {
     return `
     <li id="name__item">
       <img id="result__logo" src="${result.image}" alt="${result.image}" />
-      <p class="col-10" id="result__name">${result.name}</p>
+      <p class="col-10" id="result__name">${
+        result.name.split(' ').slice(0, 2).join(' ')
+      
+      }</p>
     </li>
     `
   }
@@ -60,7 +63,7 @@ class PriceResult extends NameResult {
   _generateMarkup(result) {
     return `
     <li class="col-5" id="price__item">
-      <p id="price__content">${numeral(result.price).format("$ (0.00 a)")}</p>
+      <p id="price__content">${numeral(result.price).format("($ 0.00 a)")}</p>
     </li>
     `;
   }
@@ -76,7 +79,7 @@ class VolumeResult extends NameResult {
   _generateMarkup(result) {
     return `
     <li class="col-5" id="volume__item">
-      <p id="volume__content">${numeral(result.volume).format("$ (0.00 a)")}</p>
+      <p id="volume__content">${numeral(result.volume).format("($ 0.00 a)")}</p>
     </li>
     `;
   }
@@ -91,7 +94,7 @@ class MarketCapResult extends NameResult {
     //prettier-ignore
     return `
     <li class="col-5" id="marketcap__item">
-      <p id="marketcap__content">${numeral(result.marketcap).format("$ (0.00 a)")}</p>
+      <p id="marketcap__content">${numeral(result.marketcap).format('($ 0.00 a)')}</p>
     </li>
     `;
   }

@@ -7,6 +7,7 @@ import * as totalData from "./view/totalCrypto.js";
 import * as topCoinsView from "./view/topCoinsView.js";
 import networkView from "./view/networkView.js";
 import * as mainResultView from "./view/mainResultView.js";
+import paginationView from "./view/paginationView.js";
 
 const totalMarket = async function (className1, className2, className3) {
   try {
@@ -30,7 +31,7 @@ const topCoins = async function (coin, className) {
 
 const resultsRender = async function () {
   try {
-    model.state.results = [];
+    model.state.search.results = [];
 
     // submitting the network // getting the selected network
     const value = networkView.networkSearch();
@@ -40,7 +41,7 @@ const resultsRender = async function () {
     await model.loadResults(value);
 
     // Storing the result
-    const result = model.state.results;
+    const result = model.getSearchResultsPage();
 
     // getting the result for extra details
     const networkDetails = await model.categoryDetails();
@@ -48,12 +49,12 @@ const resultsRender = async function () {
     networkDetails.map((i) => {
       //prettier-ignore
       i.id == value ? model.state.resultDetails = {
-            id: i.id,
-            name: i.name,
-            description: i.content,
-            marketcap: i.market_cap,
-            volume: i.volume_24h,
-    } : '';
+        id: i.id,
+        name: i.name,
+        description: i.content,
+        marketcap: i.market_cap,
+        volume: i.volume_24h,
+      } : '';
     });
     // getting the extra details for the collpse container
     const extraDetails = model.state.resultDetails;
@@ -64,6 +65,9 @@ const resultsRender = async function () {
     mainResultView.volumeResult.renderMainResult(result);
     mainResultView.marketCapResult.renderMainResult(result);
     mainResultView.viewMoreResult.renderMainResult(result);
+
+    // render the pagination
+    paginationView.renderPageView(model.state.search);
   } catch (err) {
     console.error(err);
   }

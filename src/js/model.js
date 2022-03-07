@@ -4,7 +4,11 @@ export const state = {
   coin: {},
   totalCrypto: {},
   resultDetails: {},
-  results: [],
+  search: {
+    results: [],
+    page: 1,
+    resultsPerPage: config.RES_PER_PAGE,
+  },
 };
 
 //////////////////////////////////////////////////////////////////
@@ -65,7 +69,7 @@ export const loadResults = async function (eco) {
     const data = await res.json();
 
     const [] = data.map((i) =>
-      state.results.push({
+      state.search.results.push({
         name: i.name,
         id: i.id,
         volume: i.total_volume,
@@ -78,4 +82,11 @@ export const loadResults = async function (eco) {
   } catch (err) {
     console.error(err);
   }
+};
+
+export const getSearchResultsPage = function (page = state.search.page) {
+  state.search.page = page;
+  const start = (page - 1) * 10;
+  const end = page * state.search.resultsPerPage;
+  return state.search.results.slice(start, end);
 };

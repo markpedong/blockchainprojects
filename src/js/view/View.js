@@ -31,4 +31,20 @@ export default class View {
 
     this._mainResultRender();
   }
+
+  renderPageView(data) {
+    this._data = data;
+    const markup = this._generateMarkup();
+
+    this._parentEl.insertAdjacentHTML("afterbegin", markup);
+  }
+
+  renderSpinner = function () {
+    const markup = `
+      <div class="lds-dual-ring"></div>
+    `;
+
+    // this._clear();
+    this._collapseContainer.insertAdjacentHTML("afterbegin", markup);
+  };
 }
