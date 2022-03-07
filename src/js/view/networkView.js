@@ -67,6 +67,7 @@ class NetworkView extends View {
       <div class="row d-flex p-0">
         <div id="coin__container" class="col-1 p-0">
           <p id="coin__number" class="mb-0 text-center">#</p>
+          <ul class="list-unstyled" id="result__number"></ul>
         </div>
         <div id="coin__container" class="col-5 col-sm-4 col-lg-3 p-0">
           <p id="coin__name" class="mb-0 text-center">Coin:</p>
@@ -80,16 +81,20 @@ class NetworkView extends View {
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
               <!-- Price Header -->
               <p id="coin__price__header">Price</p>
+              <ul id="price__list"></ul>
             </li>
             <!-- Volume List -->
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
               <p id="coin__volume__header">Volume</p>
+              <ul id="volume__list"></ul>
             </li>
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
               <p id="coin__marketcap__header">Mkt Cap</p>
+              <ul id="marketcap__list"></ul>
             </li>
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
               <p id="coin__moreinformation__header">More Info.</p>
+              <ul id="moreinfo__list"></ul>
             </li>
           </ul>
         </div>

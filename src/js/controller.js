@@ -6,7 +6,7 @@ import * as model from "../js/model.js";
 import * as totalData from "./view/totalCrypto.js";
 import * as topCoinsView from "./view/topCoinsView.js";
 import networkView from "./view/networkView.js";
-import mainResultView from "./view/mainResultView.js";
+import * as mainResultView from "./view/mainResultView.js";
 
 const totalMarket = async function (className1, className2, className3) {
   try {
@@ -57,9 +57,13 @@ const resultsRender = async function () {
     });
     // getting the extra details for the collpse container
     const extraDetails = model.state.resultDetails;
-
     networkView.renderResultContainer(extraDetails);
-    mainResultView.renderMainResult(result);
+    mainResultView.numberResult.renderMainResult(result);
+    mainResultView.nameResult.renderMainResult(result);
+    mainResultView.priceResult.renderMainResult(result);
+    mainResultView.volumeResult.renderMainResult(result);
+    mainResultView.marketCapResult.renderMainResult(result);
+    mainResultView.viewMoreResult.renderMainResult(result);
   } catch (err) {
     console.error(err);
   }
