@@ -69,6 +69,8 @@ class NetworkView extends View {
         </div>
         <div id="coin__container" class="col-5 col-sm-4 col-lg-3 p-0">
           <p id="coin__name" class="mb-0 text-center">Coin:</p>
+          <!-- THIS IS FOR THE NAME OF COIN -->
+          <ul class="list-unstyled" id="result__name__list"></ul>
         </div>
         <div id="coin__container" class="col-6 col-sm-7 col-lg-8 overflow-auto p-0">
           <!-- Header  and Result -->

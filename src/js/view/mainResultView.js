@@ -1,20 +1,22 @@
 import View from "./View.js";
 
 class MainResult extends View {
-  _parentEl = "#result__name__list";
-
   _mainResultRender() {
-    //prettier-ignore
-    const markup = `
-    <li id="name__item">
-        <img id="result__logo" src="${this._data.map((i) => i.image)}" alt="${this._data.map((i) => i.image)}" />
-        <p class="col-10" id="result__name">${this._data.map((i) => i.name)}</p>
-    </li>
-    `;
-    console.log(markup);
+    const markup = this._data.map(this._generateMarkup).join("");
+
     document
-      .querySelector(this._parentEl)
+      .querySelector("#result__name__list")
       .insertAdjacentHTML("afterbegin", markup);
+  }
+
+  _generateMarkup(result) {
+    //prettier-ignore
+    return `
+    <li id="name__item">
+      <img id="result__logo" src="${result.image}" alt="${result.image}" />
+      <p class="col-10" id="result__name">${result.name}</p>
+    </li>
+    `
   }
 
   mainResultHandlerRender(handler) {

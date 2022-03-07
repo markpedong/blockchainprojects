@@ -50,18 +50,8 @@ export const categoryDetails = async function () {
   try {
     const res = await fetch(`${config.EXTRA_DETAILS_URL}`);
     const data = await res.json();
-    // prettier-ignore
-    // data.map(i => {
-    //   i.id == value ? state.resultDetails = {
-    //         id: i.id,
-    //         name: i.name,
-    //         description: i.content,
-    //         marketcap: i.market_cap,
-    //         volume: i.volume_24h,
-    // } : undefined;
-    // });
 
-    return data
+    return data;
   } catch (err) {
     console.error(err);
   }
