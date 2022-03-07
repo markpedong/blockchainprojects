@@ -2,6 +2,7 @@ import View from "./View.js";
 
 class MainResult extends View {
   _mainResultRender() {
+    console.log(this._data);
     const markup = this._data.map(this._generateMarkup).join("");
 
     document

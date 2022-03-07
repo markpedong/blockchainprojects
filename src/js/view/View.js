@@ -28,6 +28,7 @@ export default class View {
 
   renderMainResult(data) {
     this._data = data;
+
     this._mainResultRender();
   }
 }

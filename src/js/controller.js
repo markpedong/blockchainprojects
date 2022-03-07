@@ -30,16 +30,17 @@ const topCoins = async function (coin, className) {
 
 const resultsRender = async function () {
   try {
-    // rendering the network in the selection
-    networkView.getNetwork();
+    model.state.results = [];
 
     // submitting the network // getting the selected network
-    let query = networkView.networkSearch();
-
-    // getting the value
-    const value = query.firstChild.dataset.value;
-
+    const value = networkView.networkSearch();
     if (!value) return;
+
+    // getting the result
+    await model.loadResults(value);
+
+    // Storing the result
+    const result = model.state.results;
 
     // getting the result for extra details
     const networkDetails = await model.categoryDetails();
@@ -54,26 +55,19 @@ const resultsRender = async function () {
             volume: i.volume_24h,
     } : '';
     });
-
     // getting the extra details for the collpse container
     const extraDetails = model.state.resultDetails;
 
     networkView.renderResultContainer(extraDetails);
-
-    // rendering the result
-    await model.loadResults(value);
-
-    const result = model.state.results;
-
     mainResultView.renderMainResult(result);
   } catch (err) {
     console.error(err);
   }
 };
+
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
-  resultsRender();
   networkView.addHandlerNetwork(resultsRender)
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))

@@ -7,6 +7,11 @@ class NetworkView extends View {
   _btnNetwork = document.querySelector("#btn__network");
   _collapseContainer = document.querySelector("#result__container");
 
+  constructor() {
+    super();
+    this.getNetwork();
+  }
+
   getNetwork() {
     // prettier-ignore
     this._networkContainer.addEventListener("click", (e) => {
@@ -20,13 +25,9 @@ class NetworkView extends View {
   }
 
   networkSearch() {
-    const query = this._selectionContainer;
-    // if (!query) return;
-    return query;
-  }
+    const value = this._selectionContainer.firstChild.dataset.value;
 
-  _clearInput() {
-    this._parentEl.innerHTML = "";
+    return value;
   }
 
   _clearCollapse() {
