@@ -28,14 +28,13 @@ export default class View {
 
   renderMainResult(data) {
     this._data = data;
-
     this._mainResultRender();
   }
 
   renderPageView(data) {
     this._data = data;
     const markup = this._generateMarkup();
-
+    this._clear();
     this._parentEl.insertAdjacentHTML("afterbegin", markup);
   }
 

@@ -13,8 +13,12 @@ class NameResult extends View {
       .insertAdjacentHTML("afterbegin", markup);
   }
 
+  _clear() {
+    this._container.innerHTML = "";
+  }
   _generateMarkup(result) {
     //prettier-ignore
+
     return `
     <li id="name__item">
       <img id="result__logo" src="${result.image}" alt="${result.image}" />
