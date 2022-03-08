@@ -61,10 +61,10 @@ export const categoryDetails = async function () {
   }
 };
 
-export const loadResults = async function (eco) {
+export const loadResults = async function (eco, order = "id_asc") {
   try {
     const res = await fetch(
-      `${config.RESULT_URL}${eco}${config.RESULT_MARKET}`
+      `${config.RESULT_URL}${eco}&order=${order}${config.RESULT_MARKET}`
     );
     const data = await res.json();
 
@@ -82,6 +82,21 @@ export const loadResults = async function (eco) {
   } catch (err) {
     console.error(err);
   }
+};
+
+//market_cap_desc
+//market_cap_asc
+//volume_asc
+//volume_desc
+//id_asc
+//id_desc
+
+export const sortResults = function () {
+  const btnSort = document.querySelectorAll(".bi-caret-up-fill");
+
+  btnSort.forEach((i) => console.log(i));
+
+  console.log(btnSort);
 };
 
 export const getSearchResultsPage = function (page = state.search.page) {

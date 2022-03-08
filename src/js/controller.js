@@ -37,6 +37,8 @@ const resultsRender = async function (goToPage) {
     const value = networkView.networkSearch();
     if (!value) return;
 
+    //choosing the order
+
     // getting the result
     await model.loadResults(value);
 
@@ -69,14 +71,10 @@ const resultsRender = async function (goToPage) {
 
     // render the pagination
     paginationView.renderPageView(model.state.search);
-  } catch (err) {
-    console.error(err);
-  }
-};
 
-const viewMore = async function () {
-  try {
-    console.log(mainResultView.default);
+    //sorting the results
+
+    // await model.sortResults();
   } catch (err) {
     console.error(err);
   }

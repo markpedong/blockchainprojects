@@ -38,7 +38,6 @@ class NetworkView extends View {
   _generateResultsContainerMarkup() {
     const markup =  `
     <div class="d-flex justify-content-center align-items-center py-5" id="header__container">
-    <img class="me-3" id="network__header__logo" src="/src/img/${this._selectionContainer.firstChild.textContent}.svg" alt="${this._selectionContainer.firstChild.textContent}"/>
     <p class="text-center mb-0 text-uppercase" id="network__header">${this._data.name}</p>
     </div>
 

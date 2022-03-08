@@ -159,6 +159,12 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  #card__header {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
 @media screen and (max-width: 992px) {
   #top__crypto__container {
     grid-template-columns: repeat(2, 1fr);
