@@ -23,7 +23,8 @@ class NameResult extends View {
     <li id="name__item">
       <img id="result__logo" src="${result.image}" alt="${result.image}" />
       <p class="col-10" id="result__name">${
-        result.name.split(' ').slice(0, 2).join(' ')
+          result.name.length > 10 ? result.name.split(' ').slice(0,1).join(' '):
+          result.name.split(' ').slice(0,2).join(' ')
       }</p>
     </li>
     `

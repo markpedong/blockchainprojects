@@ -30,7 +30,6 @@
   color: var(--gray-0);
 }
 
-#btn__network,
 #crypto__price,
 #crypto__price {
   font-size: var(--font-size-fluid-1);
@@ -56,6 +55,11 @@
   border-radius: var(--radius-3);
   padding: var(--size-4) var(--size-fluid-3);
   border: none !important;
+  transition: all 0.2s ease;
+}
+
+#search__btn:hover {
+  background-color: $cryptobackground;
 }
 
 #top__crypto__header {
@@ -117,6 +121,10 @@
   text-transform: capitalize;
 }
 
+#btn__network {
+  font-size: var(--font-size-2);
+}
+
 #card__header {
   font-family: $poppinsFont, sans-serif;
   border-radius: var(--radius-2);
@@ -159,12 +167,6 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-  #card__header {
-    grid-template-columns: 1fr 5fr;
-  }
-}
-
 @media screen and (max-width: 992px) {
   #top__crypto__container {
     grid-template-columns: repeat(2, 1fr);
@@ -173,5 +175,9 @@
 @media screen and (max-width: 576px) {
   #top__crypto__container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  #card__header {
+    grid-template-columns: 1fr 6fr;
   }
 }
