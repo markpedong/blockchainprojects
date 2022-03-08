@@ -2,6 +2,6 @@ txt
 css
 node_modules
 package-lock.json
-
+dist
 .parcel-cache
 123.html
