@@ -73,7 +73,8 @@ const resultsRender = async function (goToPage) {
     paginationView.renderPageView(model.state.search);
 
     //sorting the results
-
+    const sortedResult = result.sort((a, b) => b.id.length - a.id.length);
+    console.log(sortedResult);
     // await model.sortResults();
   } catch (err) {
     console.error(err);
