@@ -43,13 +43,4 @@ export default class View {
     this._clear();
     this._parentEl.insertAdjacentHTML("afterbegin", markup);
   }
-
-  renderSpinner = function () {
-    const markup = `
-      <div class="lds-dual-ring"></div>
-    `;
-
-    // this._clear();
-    this._collapseContainer.insertAdjacentHTML("afterbegin", markup);
-  };
 }

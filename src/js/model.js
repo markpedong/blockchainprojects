@@ -94,9 +94,9 @@ export const loadResults = async function (eco, order = "id_asc") {
 export const sortResults = function () {
   const btnSort = document.querySelectorAll(".bi-caret-up-fill");
 
-  btnSort.forEach((i) => console.log(i));
+  // btnSort.forEach((i) => console.log(i));
 
-  console.log(btnSort);
+  // console.log(btnSort);
 };
 
 export const getSearchResultsPage = function (page = state.search.page) {

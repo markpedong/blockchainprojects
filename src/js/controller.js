@@ -58,7 +58,6 @@ const resultsRender = async function (goToPage) {
         volume: i.volume_24h,
       } : '';
     });
-    // getting the extra details for the collpse container
 
     const extraDetails = model.state.resultDetails;
     networkView.renderResultContainer(extraDetails);
@@ -72,11 +71,22 @@ const resultsRender = async function (goToPage) {
     // render the pagination
     paginationView.renderPageView(model.state.search);
 
-    console.log(result);
+    // sorting the results
+    const btnSort = document.querySelectorAll(".bi-caret-up-fill");
 
-    //sorting the results
-    // const sortedResult = result.sort((a, b) => b.id.length - a.id.length);
-    // console.log(sortedResult);
+    btnSort.forEach((i) =>
+      i.addEventListener("click", function () {
+        result.sort((a, b) => b.id.length - a.id.length);
+        networkView.renderResultContainer(extraDetails);
+        mainResultView.numberResult.renderMainResult(result);
+        mainResultView.nameResult.renderMainResult(result);
+        mainResultView.priceResult.renderMainResult(result);
+        mainResultView.volumeResult.renderMainResult(result);
+        mainResultView.marketCapResult.renderMainResult(result);
+        mainResultView.viewMoreResult.renderMainResult(result);
+      })
+    );
+
     // await model.sortResults();
   } catch (err) {
     console.error(err);
