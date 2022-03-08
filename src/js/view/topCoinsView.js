@@ -14,7 +14,6 @@ class TopCoinsView extends View {
 
   _generateMarkup() {
     const markup =  `
-      <img id="top__brand" src="/src/img/${this._data.acronym}.svg" alt="${this._data.acronym}" />
       <p id="crypto__price">${numeral(this._data.price).format("$ 0,0[.]00")}</p>
       <div class="top__bitcoin" id="cryptotext__container">
       <p id="crypto__header">${this._data.name}</p>
@@ -24,7 +23,7 @@ class TopCoinsView extends View {
     `
     ;
 
-    document.querySelector(this._container).insertAdjacentHTML('afterbegin', markup)
+    document.querySelector(this._container).insertAdjacentHTML('beforeend', markup)
     
   }
 }

@@ -47,6 +47,7 @@ const resultsRender = async function (goToPage) {
     const networkDetails = await model.categoryDetails();
 
     networkDetails.map((i) => {
+      console.log(i);
       //prettier-ignore
       i.id == value ? model.state.resultDetails = {
         id: i.id,
