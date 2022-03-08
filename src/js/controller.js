@@ -1,6 +1,5 @@
 // // import * as animation from "./view/animation.js";
 // // import * as navbar from "./view/navbar.js";
-import * as collapse from "./view/collapseView.js";
 import * as config from "./config.js";
 import * as model from "../js/model.js";
 import * as totalData from "./view/totalCrypto.js";
@@ -8,6 +7,7 @@ import * as topCoinsView from "./view/topCoinsView.js";
 import networkView from "./view/networkView.js";
 import * as mainResultView from "./view/mainResultView.js";
 import paginationView from "./view/paginationView.js";
+import viewMoreDetails from "./view/viewMore.js";
 
 const totalMarket = async function (className1, className2, className3) {
   try {
@@ -47,7 +47,6 @@ const resultsRender = async function (goToPage) {
     const networkDetails = await model.categoryDetails();
 
     networkDetails.map((i) => {
-      console.log(i);
       //prettier-ignore
       i.id == value ? model.state.resultDetails = {
         id: i.id,
@@ -75,6 +74,14 @@ const resultsRender = async function (goToPage) {
   }
 };
 
+const viewMore = async function () {
+  try {
+    console.log(mainResultView.default);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
@@ -84,6 +91,7 @@ const init = function () {
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))
   topCoinsView.tether.topCoinsHandlerRender(topCoins(config.TETHER, topCoinsView.tether))
   paginationView.addHandlerClick(resultsRender)
+  // viewMoreDetails.viewMoreHandler(viewMore)
 };
 
 init();

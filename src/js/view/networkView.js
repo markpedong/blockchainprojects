@@ -36,7 +36,6 @@ class NetworkView extends View {
 
   // prettier-ignore
   _generateResultsContainerMarkup() {
-    console.log(this._selectionContainer.firstChild.textContent);
     const markup =  `
     <div class="d-flex justify-content-center align-items-center py-5" id="header__container">
     <img class="me-3" id="network__header__logo" src="/src/img/${this._selectionContainer.firstChild.textContent}.svg" alt="${this._selectionContainer.firstChild.textContent}"/>
@@ -71,7 +70,7 @@ class NetworkView extends View {
           <ul class="list-unstyled" id="result__number"></ul>
         </div>
         <div id="coin__container" class="col-5 col-sm-4 col-lg-3 p-0">
-          <p id="coin__name" class="mb-0 text-center">Coin:</p>
+          <p id="coin__name" class="mb-0 text-center">Coin: <i class="bi bi-caret-up-fill ms-3"></i></p>
           <!-- THIS IS FOR THE NAME OF COIN -->
           <ul class="list-unstyled" id="result__name__list"></ul>
         </div>
@@ -81,16 +80,16 @@ class NetworkView extends View {
             <!-- Price List -->
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
               <!-- Price Header -->
-              <p id="coin__price__header">Price</p>
+              <p id="coin__price__header">Price <i class="bi bi-caret-up-fill ms-3"></i></p>
               <ul id="price__list"></ul>
             </li>
             <!-- Volume List -->
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
-              <p id="coin__volume__header">Volume</p>
+              <p id="coin__volume__header">Volume <i class="bi bi-caret-up-fill ms-3"></i></p>
               <ul id="volume__list"></ul>
             </li>
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
-              <p id="coin__marketcap__header">Mkt Cap</p>
+              <p id="coin__marketcap__header">Mkt Cap <i class="bi bi-caret-up-fill ms-3"></i></p>
               <ul id="marketcap__list"></ul>
             </li>
             <li class="col-12 col-sm-6 col-md-5 col-lg-3">
