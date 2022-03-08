@@ -6,10 +6,10 @@ class PaginationView extends View {
   addHandlerClick(handler) {
     this._parentEl.addEventListener("click", function (e) {
       e.preventDefault();
+
       const btn = e.target.closest(".page-item");
 
       if (!btn) return;
-      console.log(btn);
 
       const goToPage = +btn.dataset.goto;
       handler(goToPage);
@@ -20,37 +20,57 @@ class PaginationView extends View {
     //prettier-ignore
     const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage)
     const curPage = this._data.page;
+
+    //prettier-ignore
+    const prevButton = `
+      <li  data-goto="${curPage - 1}" class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li  data-goto="${curPage - 3}" class="page-item"><a class="page-link" href="#">${curPage - 3}</a></li>
+      <li  data-goto="${curPage - 2}" class="page-item"><a class="page-link" href="#">${curPage - 2}</a></li>
+      <li  data-goto="${curPage - 1}" class="page-item"><a class="page-link" href="#">${curPage - 1}</a></li>
+    `;
+    //prettier-ignore
+    const nextButton = `
+      <li data-goto="${curPage}" class="page-item"> <a class="page-link" href="#">${curPage}</a></li>
+      <li data-goto="${curPage + 1}" class="page-item"> <a class="page-link" href="#">${curPage + 1}</a></li>
+      <li data-goto="${curPage + 2}" class="page-item"><a class="page-link" href="#">${curPage + 2}</a></li>
+      <li data-goto="${curPage + 3}" class="page-item"><a class="page-link" href="#">${curPage + 3}</a></li>
+      <li data-goto="${curPage + 1}" class="page-item"><a class="page-link" href="#">Next</a></li>
+    `;
+    //prettier-ignore
+    const secondButton = `
+    <li data-goto="${curPage - 1}" class="page-item"> <a class="page-link" href="#">${curPage - 1}</a></li>
+    <li data-goto="${curPage}" class="page-item"> <a class="page-link" href="#">${curPage}</a></li>
+    <li data-goto="${curPage + 1}" class="page-item"><a class="page-link" href="#">${curPage + 1}</a></li>
+    <li data-goto="${curPage + 2}" class="page-item"><a class="page-link" href="#">${curPage + 2}</a></li>
+    <li data-goto="${curPage + 1}" class="page-item"><a class="page-link" href="#">Next</a></li>
+    `;
+
+    //prettier-ignore
+    const bothButtons = `
+      <li data-goto="${curPage - 2}"class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li data-goto="${curPage - 1}"class="page-item"><a class="page-link" href="#">${curPage - 1}</a></li>
+      <li data-goto="${curPage}"    class="page-item"><a class="page-link" href="#">${curPage}</a></li>
+      <li data-goto="${curPage + 1}"class="page-item"><a class="page-link" href="#">${curPage + 1}</a></li>
+      <li data-goto="${curPage + 1}"class="page-item"><a class="page-link" href="#">Next</a></li>
+    `;
+
     //Page 1 and there are other pages
-    if (this._data.page === 1 && numPages > 1) {
-      //prettier-ignore
-      return `
-        <li data-goto="${curPage + 1}" class="page-item"> <a class="page-link" href="#">${curPage + 1}</a></li>
-        <li data-goto="${curPage + 2}" class="page-item"><a class="page-link" href="#">${curPage + 2}</a></li>
-        <li data-goto="${curPage + 3}" class="page-item"><a class="page-link" href="#">${curPage + 3}</a></li>
-        <li data-goto="${curPage + 1}" class="page-item"><a class="page-link" href="#">Next</a></li>
-      `;
+    if (curPage === 1 && numPages > 1) {
+      return nextButton;
     }
 
     // Last Page
-    if (this._data.page === numPages && numPages > 1) {
-      //prettier-ignore
-      return `
-        <li  data-goto="${curPage - 1}" class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li  data-goto="${curPage - 3}" class="page-item"><a class="page-link" href="#">${curPage - 3}</a></li>
-        <li  data-goto="${curPage - 2}" class="page-item"><a class="page-link" href="#">${curPage - 2}</a></li>
-        <li  data-goto="${curPage - 1}" class="page-item"><a class="page-link" href="#">${curPage - 1}</a></li>
-      `;
+    if (curPage === numPages && numPages > 1) {
+      return prevButton;
     }
     // Other Page
-    if (this._data.page < numPages) {
+    if (curPage === 2) {
       //prettier-ignore
-      return `
-        <li data-goto="${curPage - 2}"class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li data-goto="${curPage - 1}"class="page-item"><a class="page-link" href="#">${curPage - 1}</a></li>
-        <li data-goto="${curPage}"    class="page-item"><a class="page-link" href="#">${curPage}</a></li>
-        <li data-goto="${curPage + 1}"class="page-item"><a class="page-link" href="#">${curPage + 1}</a></li>
-        <li data-goto="${curPage + 2}"class="page-item"><a class="page-link" href="#">Next</a></li>
-      `;
+      return secondButton
+    }
+
+    if (curPage < numPages) {
+      return bothButtons;
     }
 
     //Page 1 and there are NO other pages

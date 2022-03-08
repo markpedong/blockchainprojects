@@ -29,7 +29,7 @@ const topCoins = async function (coin, className) {
   }
 };
 
-const resultsRender = async function () {
+const resultsRender = async function (goToPage) {
   try {
     model.state.search.results = [];
 
@@ -41,7 +41,7 @@ const resultsRender = async function () {
     await model.loadResults(value);
 
     // Storing the result
-    const result = model.getSearchResultsPage();
+    const result = model.getSearchResultsPage(goToPage);
 
     // getting the result for extra details
     const networkDetails = await model.categoryDetails();
@@ -57,6 +57,7 @@ const resultsRender = async function () {
       } : '';
     });
     // getting the extra details for the collpse container
+
     const extraDetails = model.state.resultDetails;
     networkView.renderResultContainer(extraDetails);
     mainResultView.numberResult.renderMainResult(result);
@@ -73,22 +74,15 @@ const resultsRender = async function () {
   }
 };
 
-const controlPagination = function (goToPage) {
-  const result = model.getSearchResultsPage(goToPage);
-
-  //render NEW results
-  paginationView.renderPageView(model.state.search);
-};
-
 // This code will run as soon as the page starts
 // prettier-ignore
 const init = function () {
+  totalMarket(totalData.totalCryptoMarketCap, totalData.totalCryptoActive, totalData.totalActiveMarkets);
   networkView.addHandlerNetwork(resultsRender)
   topCoinsView.bitcoin.topCoinsHandlerRender(topCoins(config.BITCOIN, topCoinsView.bitcoin))
   topCoinsView.ethereum.topCoinsHandlerRender(topCoins(config.ETHEREUM, topCoinsView.ethereum))
   topCoinsView.tether.topCoinsHandlerRender(topCoins(config.TETHER, topCoinsView.tether))
-  totalMarket(totalData.totalCryptoMarketCap, totalData.totalCryptoActive, totalData.totalActiveMarkets);
-  paginationView.addHandlerClick(controlPagination)
+  paginationView.addHandlerClick(resultsRender)
 };
 
 init();

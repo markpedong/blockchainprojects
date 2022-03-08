@@ -3,11 +3,17 @@ export default class View {
     this._parentEl.innerHTML = "";
   }
 
-  // prettier-ignore
-  render(data){
-      this._data = data;
-      this._generateMarkup()
+  render(data, render = true) {
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
+
+    this._data = data;
+    this._generateMarkup();
+
+    // Guard Clause
+    if (!render) return markup;
   }
+
   renderTotalMarketCap(data) {
     this._data = data;
     this._markupTotalMarketCap();

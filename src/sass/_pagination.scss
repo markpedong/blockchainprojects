@@ -1,0 +1,24 @@
+#pagination__container {
+  margin-top: var(--size-5);
+}
+
+.page-link {
+  background-color: $backgroundcolor;
+  color: var(--gray-4);
+  font-family: $poppinsFont, sans-serif;
+}
+
+.page-link:hover {
+  background-color: $backgroundcolor;
+  color: var(--gray-4);
+}
+
+.page-item:focus {
+  background-color: $backgroundcolor;
+  color: var(--gray-4);
+}
+
+.page-link:focus {
+  background-color: $backgroundcolor;
+  color: var(--gray-4);
+}
