@@ -8,6 +8,7 @@ import networkView from "./view/networkView.js";
 import * as mainResultView from "./view/mainResultView.js";
 import paginationView from "./view/paginationView.js";
 import viewMoreDetails from "./view/viewMore.js";
+import sortingButton from "./view/sortingButton.js";
 
 const totalMarket = async function (className1, className2, className3) {
   try {
@@ -60,13 +61,17 @@ const resultsRender = async function (goToPage) {
     });
 
     const extraDetails = model.state.resultDetails;
-    networkView.renderResultContainer(extraDetails);
-    mainResultView.numberResult.renderMainResult(result);
-    mainResultView.nameResult.renderMainResult(result);
-    mainResultView.priceResult.renderMainResult(result);
-    mainResultView.volumeResult.renderMainResult(result);
-    mainResultView.marketCapResult.renderMainResult(result);
-    mainResultView.viewMoreResult.renderMainResult(result);
+    const renderedResult = function (res) {
+      networkView.renderResultContainer(extraDetails);
+      mainResultView.numberResult.renderMainResult(res);
+      mainResultView.nameResult.renderMainResult(res);
+      mainResultView.priceResult.renderMainResult(res);
+      mainResultView.volumeResult.renderMainResult(res);
+      mainResultView.marketCapResult.renderMainResult(res);
+      mainResultView.viewMoreResult.renderMainResult(res);
+    };
+
+    renderedResult(result);
 
     // render the pagination
     paginationView.renderPageView(model.state.search);
@@ -77,13 +82,7 @@ const resultsRender = async function (goToPage) {
     btnSort.forEach((i) =>
       i.addEventListener("click", function () {
         result.sort((a, b) => b.id.length - a.id.length);
-        networkView.renderResultContainer(extraDetails);
-        mainResultView.numberResult.renderMainResult(result);
-        mainResultView.nameResult.renderMainResult(result);
-        mainResultView.priceResult.renderMainResult(result);
-        mainResultView.volumeResult.renderMainResult(result);
-        mainResultView.marketCapResult.renderMainResult(result);
-        mainResultView.viewMoreResult.renderMainResult(result);
+        renderedResult(result);
       })
     );
 
