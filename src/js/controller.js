@@ -77,14 +77,14 @@ const resultsRender = async function (goToPage) {
     paginationView.renderPageView(model.state.search);
 
     // sorting the results
-    const btnSort = document.querySelectorAll(".bi-caret-up-fill");
+    // const btnSort = document.querySelectorAll(".bi-caret-up-fill");
 
-    btnSort.forEach((i) =>
-      i.addEventListener("click", function () {
-        result.sort((a, b) => b.id.length - a.id.length);
-        renderedResult(result);
-      })
-    );
+    // btnSort.forEach((i) =>
+    //   i.addEventListener("click", function () {
+    //     result.sort((a, b) => b.id.length - a.id.length);
+    //     renderedResult(result);
+    //   })
+    // );
 
     // await model.sortResults();
   } catch (err) {
