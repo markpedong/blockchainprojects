@@ -17,6 +17,7 @@
   "homepage": "https://github.com/markpedong/blockchainprojects#readme",
   "dependencies": {
     "core-js": "^3.21.1",
+    "firebase": "^9.6.8",
     "parcel": "^2.3.2",
     "regenerator-runtime": "^0.13.9"
   },
